@@ -212,6 +212,12 @@ footer .fl{margin-top:8px;display:flex;gap:6px 16px;justify-content:center;flex-
  .tc.intro .price{font-size:1.4rem}
  .pcn .h{display:none}
 }
+
+.edge{position:absolute;top:0;bottom:0;width:80px;z-index:4;display:grid;place-items:center;color:#fff;font-size:4rem;font-weight:300;pointer-events:none;opacity:0;transition:opacity .3s}
+.edge.l{left:0;background:linear-gradient(90deg,rgba(0,0,0,.28),transparent)}
+.edge.r{right:0;background:linear-gradient(270deg,rgba(0,0,0,.28),transparent)}
+.edge.hot{opacity:1}
+@media(hover:none){.edge{display:none}}
 </style>
 </head>
 <body>
@@ -233,7 +239,7 @@ footer .fl{margin-top:8px;display:flex;gap:6px 16px;justify-content:center;flex-
   </div>
   <div class="pnav" id="pnav"></div>
   <button class="pa" id="pp" type="button" aria-label="Предыдущая часть"><svg viewBox="0 0 28 28"><path d="M24 14H4M12 6l-8 8 8 8"/></svg></button>
-  <div class="pcn first" id="pcn"><span class="n">01 / 07</span><span class="h"> · листайте колесом мыши</span></div>
+  <div class="pcn first" id="pcn"><span class="n">01 / 07</span></div>
   <button class="pa" id="pn" type="button" aria-label="Следующая часть"><svg viewBox="0 0 28 28"><path d="M4 14h20M16 6l8 8-8 8"/></svg></button>
 </header>
 
@@ -587,15 +593,16 @@ document.getElementById('pp').addEventListener('click',function(){user();go(cur-
 document.getElementById('pn').addEventListener('click',function(){user();go(cur+1,1)});
 tabs.forEach(function(b,i){});
 st.addEventListener('keydown',function(e){if(e.key==='ArrowLeft'){user();go(cur-1,-1)}else if(e.key==='ArrowRight'){user();go(cur+1,1)}});
-var lockUntil=0;
-addEventListener('wheel',function(e){
-  if(e.ctrlKey||Math.abs(e.deltaY)<Math.abs(e.deltaX)||window.scrollY>2)return;
-  var now=Date.now();
-  if(now<lockUntil){e.preventDefault();lockUntil=Math.max(lockUntil,now+160);return}
-  var fwd=e.deltaY>0,end=slides.length-1;
-  if((fwd&&cur===end)||(!fwd&&cur===0))return;
-  e.preventDefault();user();go(cur+(fwd?1:-1),fwd?1:-1);lockUntil=now+1150;
-},{passive:false});
+var zone=0,since=0,lastEdge=0;
+var eL=el('div','edge l'),eR=el('div','edge r');eL.textContent='‹';eR.textContent='›';st.appendChild(eL);st.appendChild(eR);
+function ez(e){var r=st.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top,z=0;
+  if(y>0&&y<r.height&&!(e.target.closest&&e.target.closest('.tc,.pa,.pnav'))){var w=Math.min(80,r.width*.12);if(x<w)z=-1;else if(x>r.width-w)z=1}
+  if(z!==zone){zone=z;since=Date.now()}
+  eL.classList.toggle('hot',z<0&&cur>0);eR.classList.toggle('hot',z>0&&cur<slides.length-1)}
+st.addEventListener('mousemove',ez);
+st.addEventListener('mouseleave',function(){zone=0;eL.classList.remove('hot');eR.classList.remove('hot')});
+setInterval(function(){var n=Date.now();if(!zone||busy||n-since<250||n-lastEdge<1500)return;
+  var t=cur+zone;if(t<0||t>=slides.length)return;lastEdge=n;user();go(t,zone);setTimeout(function(){eL.classList.toggle('hot',zone<0&&cur>0);eR.classList.toggle('hot',zone>0&&cur<slides.length-1)},1000)},120);
 var sx=0,sy=0,dn=false;
 st.addEventListener('pointerdown',function(e){if(e.target.closest('button,a'))return;dn=true;sx=e.clientX;sy=e.clientY});
 addEventListener('pointerup',function(e){if(!dn)return;dn=false;var dx=e.clientX-sx,dy=e.clientY-sy;
