@@ -220,12 +220,20 @@ footer .fl{margin-top:8px;display:flex;gap:6px 16px;justify-content:center;flex-
 @media(hover:none){.edge{display:none}}
 .ph0{display:grid;place-items:center;background:linear-gradient(135deg,var(--ac),#ff3d71);cursor:default}.ph0 span{font-size:3.2rem;font-weight:900;color:#fff;letter-spacing:.05em}
 .cat .card .badge.nb{background:#0af;color:#fff;border:0;font-weight:700}.cat .card .badge.hotb{background:linear-gradient(135deg,var(--ac),#ff3d71);color:#fff;border:0;font-weight:700}
+
+.tel{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:40px;border:2px solid var(--ac);color:var(--tx);font-weight:800;text-decoration:none;white-space:nowrap;transition:.25s}
+.tel svg{color:var(--ac)}
+.tel:hover{background:var(--ac);color:#1a0f00}.tel:hover svg{color:#1a0f00}
+.tel.big{margin-top:14px;color:#fff;border-color:rgba(255,255,255,.8);font-size:1.05rem}
+.tel.big svg{color:#fff}.tel.big:hover{background:#fff;color:#c2410c}.tel.big:hover svg{color:#c2410c}
+@media(max-width:900px){nav .tel span{display:none}nav .tel{padding:10px;width:44px;height:44px;justify-content:center}}
+@media(max-width:820px){.tc.intro>p,.tc.intro .price small{display:none}.tc.intro .tag{font-size:.75rem;padding:4px 12px}.tc.intro .row{margin-top:10px}.tc.intro .tel.big{margin-top:10px;padding:8px 14px}}
 </style>
 </head>
 <body>
 <canvas id="sg"></canvas>
 <canvas id="fx"></canvas>
-<nav><b>АВТО<span>СФЕРА</span> 163</b><span class="nl" style="display:flex;gap:18px;align-items:center"><a class="hd" href="#about">О компании</a><a class="hd" href="#catalog">Ассортимент</a><a class="hd" href="#reviews">Отзывы</a><a class="btn" href="#buy" style="padding:10px 20px;color:#1a0f00">Купить</a></span></nav>
+<nav><b>АВТО<span>СФЕРА</span> 163</b><span class="nl" style="display:flex;gap:18px;align-items:center"><a class="hd" href="#about">О компании</a><a class="hd" href="#catalog">Ассортимент</a><a class="hd" href="#reviews">Отзывы</a><a class="tel" href="tel:+79587681573" aria-label="Позвонить +7 958 768-15-73"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><span>+7 958 768-15-73</span></a><a class="btn" href="#buy" style="padding:10px 20px;color:#1a0f00">Купить</a></span></nav>
 
 <header class="pstage" id="ps" tabindex="0" aria-label="КПП Лада — разбор коробки по частям">
   <div class="ps cur" style="background:#e8601c">
@@ -236,6 +244,7 @@ footer .fl{margin-top:8px;display:flex;gap:6px 16px;justify-content:center;flex-
       <p>«АвтоСфера 163» — новые коробки передач и узлы трансмиссии для Лада и Нивы. С гарантией, отправка по всей России.</p>
       <div class="price">КПП от 25 500 ₽<small>Лада Веста 2180 — 52 000 ₽ или 4 334 ₽ × 12 мес. без переплаты</small></div>
       <div class="row"><a class="btn" href="#buy">Заказать коробку</a><a class="btn ghost" href="#catalog">Ассортимент</a></div>
+      <a class="tel big" href="tel:+79587681573"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg><span>+7 958 768-15-73</span></a>
     </div></div>
     <div class="ly pc"></div>
   </div>
