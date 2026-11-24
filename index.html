@@ -3,183 +3,239 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>КПП Лада Веста 2180 — новая, 52 000 ₽</title>
+<title>Екатерина Головина — стилист-колорист, Самара</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0b0b12;--bg2:#14141f;--tx:#f4f4f8;--mut:#a5a5b8;--ac:#ff6a1a;--ac2:#ffb020;--card:rgba(255,255,255,.05);--bd:rgba(255,255,255,.1);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f6f4f0;--bg2:#ebe7e0;--tx:#16161d;--mut:#5d5d6c;--card:rgba(0,0,0,.04);--bd:rgba(0,0,0,.12)}}
-:root[data-theme="dark"]{--bg:#0b0b12;--bg2:#14141f;--tx:#f4f4f8;--mut:#a5a5b8}
-*{box-sizing:border-box;margin:0}
-html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
-body{background:var(--bg);color:var(--tx);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6;overflow-x:hidden}
-canvas#fx{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
-section,header,footer{position:relative;z-index:1;padding:80px 6%}
-.wrap{max-width:1100px;margin:auto}
-nav{position:fixed;top:0;left:0;right:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:calc(12px + env(safe-area-inset-top,0px)) 6% 12px;backdrop-filter:blur(14px);background:color-mix(in srgb,var(--bg) 70%,transparent)}
-nav b{font-size:1.15rem;letter-spacing:.5px}nav b span{color:var(--ac)}
-.btn{display:inline-block;padding:14px 28px;border-radius:50px;background:linear-gradient(135deg,var(--ac),var(--ac2));color:#1a0f00;font-weight:700;text-decoration:none;border:0;cursor:pointer;position:relative;overflow:hidden;box-shadow:0 8px 30px rgba(255,106,26,.4);transition:transform .25s}
-.btn:hover{transform:translateY(-3px) scale(1.04)}
-.btn::after{content:"";position:absolute;top:0;left:-80%;width:50%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.6),transparent);transform:skewX(-20deg);animation:shine 3s infinite}
-@keyframes shine{to{left:140%}}
-.ghost{background:transparent;color:var(--tx);border:1.5px solid var(--bd);box-shadow:none}
-.ghost::after{display:none}
-.hero{min-height:100vh;display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center;padding-top:110px}
-.tag{display:inline-block;padding:6px 16px;border-radius:30px;border:1px solid var(--ac);color:var(--ac2);font-size:.85rem;margin-bottom:18px;animation:pulse 2.4s infinite}
-@keyframes pulse{50%{box-shadow:0 0 0 10px rgba(255,106,26,0)}0%{box-shadow:0 0 0 0 rgba(255,106,26,.5)}}
-h1{font-size:clamp(2.4rem,6vw,4.6rem);line-height:1.05;font-weight:900}
-.grad{background:linear-gradient(90deg,var(--ac),var(--ac2),#ff3d71,var(--ac));background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:flow 6s linear infinite}
-@keyframes flow{to{background-position:300% 0}}
-.hero p{color:var(--mut);font-size:1.15rem;margin:20px 0 28px;max-width:520px}
-.price{font-size:2.6rem;font-weight:900;margin-bottom:6px}
-.price small{display:block;font-size:.95rem;font-weight:400;color:var(--mut)}
-.row{display:flex;gap:14px;flex-wrap:wrap;margin-top:22px}
-.gears{position:relative;aspect-ratio:1;max-width:460px;margin:auto;width:100%}
-.gears>div{position:absolute;filter:drop-shadow(0 14px 18px rgba(0,0,0,.55)) drop-shadow(0 0 22px rgba(255,106,26,.28))}.gears svg{width:100%;height:100%;display:block}
-.g1{width:68%;aspect-ratio:1;left:0;top:6%;animation:spin 26s linear infinite}
-.g2{width:46%;aspect-ratio:1;right:0;bottom:4%;animation:spin 18s linear infinite reverse}
-.g3{width:30%;aspect-ratio:1;right:4%;top:2%;animation:spin 11s linear infinite}
-@keyframes spin{to{transform:rotate(360deg)}}
-h2{font-size:clamp(1.8rem,4vw,2.8rem);margin-bottom:34px;font-weight:800}
-h2 span{color:var(--ac)}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px}
-.card{background:var(--card);border:1px solid var(--bd);border-radius:22px;padding:26px;backdrop-filter:blur(8px);transition:transform .3s,border-color .3s,box-shadow .3s}
-.card:hover{transform:translateY(-8px) rotate(-.6deg);border-color:var(--ac);box-shadow:0 16px 40px rgba(255,106,26,.25)}
-.card .ic{font-size:2rem;display:block;margin-bottom:10px;animation:bob 3s ease-in-out infinite}
-@keyframes bob{50%{transform:translateY(-6px)}}
-.card h3{margin-bottom:6px}.card p{color:var(--mut);font-size:.95rem}
-.num{font-size:2.6rem;font-weight:900;color:var(--ac2)}
-.spec{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:0 40px;max-width:800px}
-.spec div{display:flex;justify-content:space-between;gap:12px;padding:14px 0;border-bottom:1px dashed var(--bd)}
-.spec span{color:var(--mut)}
-.seller{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
-.ava{width:78px;height:78px;border-radius:50%;background:linear-gradient(135deg,#4caf50,#2e7d32);display:grid;place-items:center;font-size:2rem;font-weight:800;color:#fff;animation:pulse 3s infinite}
-.stars{color:var(--ac2);letter-spacing:3px}
-.cta{text-align:center;background:linear-gradient(135deg,rgba(255,106,26,.18),rgba(255,61,113,.14));border:1px solid var(--bd);border-radius:32px;padding:60px 6%}
-.cta p{color:var(--mut);margin:12px 0 26px}
-footer{text-align:center;color:var(--mut);font-size:.9rem;padding:40px 6%}
-.rv{opacity:0;transform:translateY(40px);transition:opacity .8s,transform .8s}
-.rv.in{opacity:1;transform:none}
-@media(max-width:820px){.hero{grid-template-columns:1fr;text-align:left}.gears{max-width:320px}}
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
-.rvs{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:18px}
-.rvc{position:relative}.rvc::before{content:"“";position:absolute;right:18px;top:-6px;font-size:5rem;color:var(--ac);opacity:.25;font-family:Georgia,serif}
-.who{display:flex;align-items:center;gap:12px;margin-bottom:10px}
-.av{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-weight:800;color:#fff;flex:none}
-.who small{display:block;color:var(--mut);font-size:.8rem}
-.rvc .stars{font-size:.95rem;margin-bottom:8px}.rvc .stars em{font-style:normal;color:var(--mut);letter-spacing:0;font-size:.82rem;margin-left:6px}
-.rvc p{color:var(--tx)!important;opacity:.9}
-.chips{display:flex;gap:10px;flex-wrap:wrap;margin:-10px 0 28px}
-.chip{padding:9px 20px;border-radius:30px;border:1px solid var(--bd);background:var(--card);color:var(--tx);font:inherit;font-size:.92rem;cursor:pointer;transition:all .25s}
-.chip:hover{border-color:var(--ac)}.chip.on{background:linear-gradient(135deg,var(--ac),var(--ac2));color:#1a0f00;font-weight:700;border-color:transparent}
-.cats{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}
-.cat{position:relative;display:flex;flex-direction:column;align-items:flex-start}
-.cat.off{display:none}.cat.hot{border-color:var(--ac);box-shadow:0 0 30px rgba(255,106,26,.25)}
-.gi{font-size:2.4rem;margin-bottom:8px;display:inline-block;transition:transform .8s}.cat:hover .gi{transform:rotate(180deg) scale(1.15)}
-.bdg{position:absolute;top:16px;right:16px;background:var(--ac);color:#1a0f00;font-size:.72rem;font-weight:700;padding:4px 10px;border-radius:20px}
-.pr{font-size:1.7rem;font-weight:900;color:var(--ac2);margin:8px 0}
-.pay{font-size:.78rem;padding:3px 10px;border-radius:20px;background:#12a5ff;color:#fff}
+:root{--bg:#1b1322;--bg2:#271a31;--ink:#f8eedd;--mute:#c4b3b8;--gold:#ecd5a0;--rose:#e0a38f;--orch:#9b6fb5;--line:rgba(236,213,160,.22);color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1b1322;--bg2:#271a31;--ink:#f8eedd;--mute:#c4b3b8;--gold:#ecd5a0}}
+:root[data-theme="dark"]{--bg:#1b1322;--bg2:#271a31;--ink:#f8eedd;--mute:#c4b3b8;--gold:#ecd5a0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 Manrope,system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;line-height:1.02;margin:0}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+/* nav */
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(27,19,34,.72);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:58px}
+.logo{font-family:"Cormorant Garamond",serif;font-size:22px;font-style:italic;text-decoration:none}
+nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-size:14px}
+nav ul a{text-decoration:none;color:var(--mute)}nav ul a:hover{color:var(--gold)}
+@media(max-width:640px){nav ul li:not(:last-child){display:none}}
+/* hero */
+.hero{position:relative;min-height:calc(100svh - 58px);display:flex;align-items:center;overflow:hidden;background:radial-gradient(60% 60% at 80% 20%,rgba(155,111,181,.35),transparent 70%),radial-gradient(50% 50% at 10% 90%,rgba(224,163,143,.22),transparent 70%)}
+.hero .wrap{position:relative;z-index:2;padding-top:40px;padding-bottom:60px}
+.hero h1{font-size:clamp(50px,11vw,132px);max-width:9.5em}
+.hero h1 em{font-style:italic;background:linear-gradient(100deg,#c9a46a,#fff3cf,#e0a38f,#fff3cf,#c9a46a);background-size:250% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 6s linear infinite}
+@keyframes shine{to{background-position:-250% 0}}
+.hero p{max-width:30em;color:var(--mute);margin:22px 0 28px}
+.btn{display:inline-block;padding:14px 26px;border-radius:99px;background:var(--gold);color:#2a1a30;font-weight:700;text-decoration:none;transition:transform .25s,box-shadow .25s}
+.btn:hover{transform:translateY(-3px) scale(1.03);box-shadow:0 10px 30px rgba(236,213,160,.35)}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line);margin-left:8px}
+.badge{display:inline-flex;gap:8px;align-items:center;margin-top:30px;font-size:14px;color:var(--mute)}
+.badge b{color:var(--gold);font-size:20px;font-family:"Cormorant Garamond",serif}
+.strands{position:absolute;right:-4%;top:0;height:100%;width:62%;z-index:1;opacity:.9}
+.strands path{fill:none;stroke-linecap:round;stroke-dasharray:1400;stroke-dashoffset:1400;animation:draw 3.2s ease-out forwards,sway 7s ease-in-out infinite alternate}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes sway{from{transform:translateX(-14px) skewY(-1deg)}to{transform:translateX(18px) skewY(1.5deg)}}
+.spark{position:absolute;color:var(--gold);animation:tw 3.5s ease-in-out infinite;pointer-events:none;z-index:1}
+@keyframes tw{0%,100%{opacity:.15;transform:scale(.6) rotate(0)}50%{opacity:1;transform:scale(1.2) rotate(90deg)}}
+/* marquee */
+.marq{border-block:1px solid var(--line);overflow:hidden;white-space:nowrap;padding:16px 0;background:var(--bg2)}
+.marq div{display:inline-block;animation:mq 28s linear infinite;font-family:"Cormorant Garamond",serif;font-size:30px;font-style:italic;color:var(--gold)}
+.marq:hover div{animation-play-state:paused}
+@keyframes mq{to{transform:translateX(-50%)}}
+section{padding:90px 0}
+h2{font-size:clamp(38px,6vw,68px);margin-bottom:14px}
+.lead{color:var(--mute);max-width:34em}
+/* stretch toy */
+.toy{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;margin-top:40px}
+@media(max-width:760px){.toy{grid-template-columns:1fr}}
+.hair{height:340px;border-radius:200px 200px 28px 28px/120px 120px 28px 28px;position:relative;overflow:hidden;border:1px solid var(--line);
+background:linear-gradient(180deg,#3a2619 0%,#3a2619 calc(var(--s)*.3%),#a07a50 calc(var(--s)*.7%),#f3deb0 calc(var(--s)*1%),#fff4d6 100%)}
+.hair::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(95deg,rgba(255,255,255,.07) 0 2px,transparent 2px 9px,rgba(0,0,0,.1) 9px 11px,transparent 11px 18px);animation:flow 5s ease-in-out infinite alternate}
+@keyframes flow{to{background-position:30px 0}}
+input[type=range]{width:100%;accent-color:var(--gold);height:36px}
+.cap{font-family:"Cormorant Garamond",serif;font-style:italic;font-size:26px;color:var(--gold);min-height:1.3em}
+/* cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px;margin-top:40px}
+.card{position:relative;padding:30px 26px 26px;border:1px solid var(--line);border-radius:26px;background:linear-gradient(160deg,var(--bg2),#20162a);transition:transform .15s,border-color .3s;transform-style:preserve-3d;overflow:hidden}
+.card:hover{border-color:var(--gold)}
+.card::before{content:"";position:absolute;width:200px;height:200px;right:-70px;top:-70px;border-radius:50%;background:radial-gradient(circle,var(--c),transparent 70%);opacity:.55;animation:pulse 5s ease-in-out infinite}
+@keyframes pulse{50%{transform:scale(1.35);opacity:.3}}
+.card h3{font-size:30px;margin-bottom:10px}
+.card p{color:var(--mute);font-size:15px;margin:0 0 20px}
+.price{font-family:"Cormorant Garamond",serif;font-size:40px;color:var(--gold)}
+.tag{display:inline-block;font-size:13px;border:1px solid var(--line);border-radius:99px;padding:3px 12px;margin:0 6px 8px 0;color:var(--mute)}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s,transform .8s}.rv.in{opacity:1;transform:none}
+/* reviews */
+.rev blockquote{margin:0;padding:24px;border-left:2px solid var(--gold);background:rgba(255,255,255,.03);border-radius:0 18px 18px 0}
+.rev cite{display:block;margin-top:10px;font-style:normal;color:var(--gold);font-size:14px}
+.course{margin-top:44px;padding:34px;border-radius:28px;border:1px dashed var(--gold);display:flex;gap:20px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+.course h3{font-size:34px}
+/* contacts */
+.contacts{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:26px;margin-top:34px}
+.contacts h3{font-size:26px;color:var(--gold);margin-bottom:6px}
+.contacts a{text-underline-offset:4px}
+footer{padding:36px 0 50px;text-align:center;color:var(--mute);font-size:14px;border-top:1px solid var(--line)}
+/* form + legal */
+.book{margin-top:44px;padding:30px;border:1px solid var(--line);border-radius:26px;background:var(--bg);max-width:640px}
+.book h3{font-size:34px;margin-bottom:16px}
+.book label.f{display:block;margin-bottom:14px;font-size:15px;color:var(--mute)}
+.book input[type=text],.book input[type=tel],.book select,.book textarea{display:block;width:100%;margin-top:5px;padding:12px 14px;border-radius:12px;border:1px solid var(--line);background:var(--bg2);color:var(--ink);font:inherit}
+.ck{display:flex;gap:12px;align-items:flex-start;margin:0 0 12px;font-size:14px;color:var(--mute);line-height:1.5}
+.ck input{width:20px;height:20px;flex:none;margin-top:2px;accent-color:var(--gold)}
+.ck a,.lnk{color:var(--gold);background:none;border:0;padding:0;font:inherit;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.res{display:none;margin-top:18px;padding:18px;border-radius:16px;border:1px solid var(--gold);font-size:15px}
+.res pre{white-space:pre-wrap;font:inherit;color:var(--ink);margin:10px 0}
+dialog{max-width:720px;width:calc(100% - 28px);max-height:86svh;border:1px solid var(--line);border-radius:22px;background:var(--bg2);color:var(--ink);padding:0}
+dialog::backdrop{background:rgba(10,6,14,.7)}
+dialog .in{padding:28px;font-size:15px;line-height:1.6;overflow:auto;max-height:86svh}
+dialog h2{font-size:36px}dialog h4{margin:18px 0 4px;font-size:16px;color:var(--gold)}dialog p{margin:6px 0}
+dialog .x{float:right}
+.ph{background:rgba(236,213,160,.18);padding:0 4px;border-radius:4px}
+footer .lnk{margin:0 8px}
+.cb{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:60;max-width:760px;margin:0 auto;padding:18px 20px;border-radius:20px;border:1px solid var(--gold);background:var(--bg2);box-shadow:0 14px 50px rgba(0,0,0,.5);font-size:14px;display:none}
+.cb .row{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.cb .b{flex:1 1 150px;padding:12px 16px;border-radius:99px;border:1px solid var(--gold);background:transparent;color:var(--ink);font:700 14px Manrope,sans-serif;cursor:pointer}
+.cb .b:hover{background:rgba(236,213,160,.15)}
+/* cursor sparkles */
+.trail{position:fixed;pointer-events:none;z-index:50;color:var(--gold);animation:fall .9s ease-out forwards}
+@keyframes fall{to{opacity:0;transform:translate(var(--dx),60px) rotate(180deg) scale(.2)}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.strands path{stroke-dashoffset:0}.rv{opacity:1;transform:none}}
 </style>
 </head>
 <body>
-<canvas id="fx"></canvas>
-<nav><b>АВТО<span>СФЕРА</span> 163</b><a class="btn" href="tel:+79587681573" style="padding:10px 20px">📞 Позвонить</a></nav>
+<nav><div class="wrap"><a class="logo" href="#top">Екатерина Головина</a>
+<ul><li><a href="#stretch">Растяжка</a></li><li><a href="#price">Услуги</a></li><li><a href="#reviews">Отзывы</a></li><li><a href="#contacts">Запись</a></li></ul></div></nav>
 
-<header class="hero wrap">
-  <div>
-    <span class="tag">● В наличии · несколько штук</span>
-    <h1>Новая КПП<br><span class="grad">Лада Веста 2180</span></h1>
-    <p>Собрана из заводских комплектующих. С гарантией. Отправляем транспортной компанией по всей России.</p>
-    <div class="price">52 000 ₽<small>или 4 334 ₽ × 12 месяцев без переплаты и первого взноса</small></div>
-    <div class="row"><a class="btn" href="tel:+79587681573">Заказать: +7 958 768-15-73</a><a class="btn ghost" href="#spec">Характеристики</a></div>
-  </div>
-  <div class="gears" aria-hidden="true"><div class="g1" data-t="26"></div><div class="g2" data-t="18"></div><div class="g3" data-t="11"></div></div>
-</header>
+<header class="hero" id="top">
+<svg class="strands" viewBox="0 0 600 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5b3a26"/><stop offset=".45" stop-color="#c9a46a"/><stop offset="1" stop-color="#fff0c4"/></linearGradient>
+<linearGradient id="g2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7a4a35"/><stop offset=".5" stop-color="#e0a38f"/><stop offset="1" stop-color="#ffe9d6"/></linearGradient></defs>
+<g stroke-width="5">
+<path stroke="url(#g)" d="M420 -20 C300 200 520 330 360 520 S300 720 330 840" style="animation-delay:0s,0s"/>
+<path stroke="url(#g)" d="M460 -20 C340 220 560 350 400 540 S350 740 380 840" style="animation-delay:.2s,.4s"/>
+<path stroke="url(#g2)" d="M500 -20 C380 240 600 370 440 560 S400 760 430 840" style="animation-delay:.4s,.8s"/>
+<path stroke="url(#g)" d="M380 -20 C260 190 480 320 320 500 S250 700 280 840" style="animation-delay:.6s,1.2s"/>
+<path stroke="url(#g2)" d="M340 -20 C220 180 440 300 280 490 S200 690 230 840" style="animation-delay:.8s,1.6s"/>
+<path stroke="url(#g)" d="M540 -20 C430 260 640 390 480 580 S450 780 480 840" style="animation-delay:1s,2s"/>
+</g></svg>
+<span class="spark" style="left:8%;top:18%;font-size:22px">✦</span>
+<span class="spark" style="left:46%;top:12%;font-size:14px;animation-delay:1s">✦</span>
+<span class="spark" style="left:30%;top:78%;font-size:26px;animation-delay:2s">✧</span>
+<span class="spark" style="left:88%;top:70%;font-size:18px;animation-delay:.6s">✦</span>
+<div class="wrap">
+<h1>Блонд, который <em>играет на свету</em></h1>
+<p>Аиртач, рельефное и сложное окрашивание в Самаре. Плавная растяжка от натуральных корней к светлым кончикам и цвет, который красиво отрастает.</p>
+<a class="btn" href="#contacts">Записаться</a><a class="btn ghost" href="#price">Цены</a>
+<a class="badge" href="https://yandex.ru/maps/?text=Стилист%20Екатерина%20Головина%20Самара%20Красноармейская%2076" target="_blank" rel="noopener" style="text-decoration:none"><b>5,0</b> 64 оценки на Яндекс Картах · 62 отзыва</a>
+</div></header>
 
-<section><div class="wrap">
-  <h2 class="rv">Почему берут <span>у нас</span></h2>
-  <div class="stats">
-    <div class="card rv"><span class="ic">🆕</span><h3>Совершенно новая</h3><p>Не б/у и не восстановленная — состояние «Новое».</p></div>
-    <div class="card rv"><span class="ic">🏭</span><h3>Завод ТЗА</h3><p>Тольяттинский завод автоагрегатов, сделано в России.</p></div>
-    <div class="card rv"><span class="ic">🛡️</span><h3>Гарантия</h3><p>Коробка собрана из заводских комплектующих и идёт с гарантией.</p></div>
-    <div class="card rv"><span class="ic">🚚</span><h3>Доставка по России</h3><p>Отправляем транспортной компанией. Есть Авито Доставка.</p></div>
-  </div>
+<div class="marq" aria-hidden="true"><div>Аиртач ✦ Рельефный блонд ✦ Сложное окрашивание ✦ Контуринг ✦ Растяжка цвета ✦ Скрытая седина ✦ Аиртач ✦ Рельефный блонд ✦ Сложное окрашивание ✦ Контуринг ✦ Растяжка цвета ✦ Скрытая седина ✦ </div></div>
+
+<section id="stretch"><div class="wrap">
+<h2>Подвигайте растяжку</h2>
+<p class="lead">Так работает рельефный блонд: тёмные корни плавно переходят в светлые кончики. Потяните ползунок и посмотрите, как меняется переход.</p>
+<div class="toy">
+<div class="hair" id="hair" style="--s:60" role="img" aria-label="Образец плавной растяжки цвета"></div>
+<div><div class="cap" id="cap"></div>
+<label for="rng" style="display:block;margin:14px 0 4px;color:var(--mute)">Где начинается светлый</label>
+<input id="rng" type="range" min="10" max="100" value="60">
+<p class="lead" style="font-size:15px">Коррекция нужна раз в 6–12 месяцев, потому что корни отрастают естественно, без резкой границы.</p></div>
+</div></div></section>
+
+<section id="price" style="background:var(--bg2)"><div class="wrap">
+<h2>Услуги и цены</h2>
+<p class="lead">Цены указаны на длину по плечи. Консультация перед окрашиванием обязательна.</p>
+<div class="grid">
+<article class="card rv" style="--c:#e0a38f"><h3>Аиртач</h3><p>Осветление воздушной техникой: скрывает седину или даёт более светлые кончики.</p><span class="tag">Мастер</span><span class="tag">Коррекция 6–12 мес.</span><div class="price">9 000 ₽</div></article>
+<article class="card rv" style="--c:#ecd5a0"><h3>Рельефное окрашивание</h3><p>Осветление с рельефным рисунком и плавной растяжкой блонда от натуральных корней к светлым кончикам.</p><span class="tag">Мастер</span><span class="tag">6–7 часов</span><div class="price">9 000 ₽</div></article>
+<article class="card rv" style="--c:#9b6fb5"><h3>Сложное окрашивание</h3><p>Работа на красителях Baco, Epica, Londa. Нужны консультация и предоплата.</p><span class="tag">Топ-мастер</span><span class="tag">Предоплата</span><div class="price">15 000 ₽</div></article>
+</div></div></section>
+
+<section id="reviews"><div class="wrap rev">
+<h2>Говорят клиентки</h2>
+<div class="grid">
+<blockquote class="rv"><p>Огромная благодарность Кате и её ученице! Осталась невероятно довольна результатом окрашивания.</p><cite>Гулюза Ахметова · Яндекс Карты, 20 октября 2025</cite></blockquote>
+<blockquote class="rv"><p>Сделала сложное окрашивание в технике контуринг. Результатом осталась более чем довольна.</p><cite>Лидия Гандина · Яндекс Карты, 20 октября</cite></blockquote>
+<blockquote class="rv"><p>Поделюсь опытом обучения у Екатерины: она настоящий профессионал в мире колористики.</p><cite>Анастасия Васильева · Яндекс Карты, 18 марта</cite></blockquote>
+</div>
+<p style="margin:26px 0 0;font-size:14px;color:var(--mute)">Отзывы взяты с карточки мастера на Яндекс Картах и показаны сокращённо. Рейтинг 5,0 по 64 оценкам. <a href="https://yandex.ru/maps/?text=Стилист%20Екатерина%20Головина%20Самара%20Красноармейская%2076" target="_blank" rel="noopener" class="lnk">Читать все 62 отзыва на Яндекс Картах</a></p>
+<div class="course"><div><h3>Обучение колористике</h3><p style="margin:6px 0 0;color:var(--mute)">Екатерина ещё и учит окрашиванию. Спросите про курс при записи.</p></div><a class="btn" href="tel:+79022927204">Позвонить</a></div>
 </div></section>
 
-<section><div class="wrap">
-  <h2 class="rv">Под заказ — <span>с самоблоком</span></h2>
-  <div class="card rv" style="max-width:760px"><span class="ic">🔧</span><p style="font-size:1.1rem;color:var(--tx)">Также можно собрать под заказ КПП с самоблоком. Это исключает такую проблему, как пробитие корпуса.</p></div>
+<section id="contacts" style="background:var(--bg2)"><div class="wrap">
+<h2>Запись и контакты</h2>
+<div class="contacts">
+<div><h3>Адрес</h3>Самара, Красноармейская ул., 76, этаж 1<br><a href="https://yandex.ru/maps/?rtext=~Самара,%20Красноармейская%20улица,%2076&rtt=auto" target="_blank" rel="noopener">Проложить маршрут</a><br><a href="https://yandex.ru/maps/?text=Стилист%20Екатерина%20Головина%20Самара%20Красноармейская%2076" target="_blank" rel="noopener">Открыть на Яндекс Картах</a></div>
+<div><h3>Телефон</h3><a href="tel:+79022927204">+7 (902) 292-72-04</a></div>
+<div><h3>Онлайн-запись</h3><a href="https://dikidi.net" target="_blank" rel="noopener">dikidi.net</a><br>Сегодня открыто до 20:00</div>
+</div>
 </div></section>
+<footer><button class="lnk" data-d="d-policy">Политика конфиденциальности</button><button class="lnk" data-d="d-consent">Согласие на обработку данных</button><button class="lnk" data-d="d-offer">Публичная оферта</button><button class="lnk" id="cset">Настройки cookie</button><p style="margin:14px 0 0">© Екатерина Головина · стилист-колорист, Самара ✦</p></footer>
 
-<section id="spec"><div class="wrap">
-  <h2 class="rv"><span>Характеристики</span></h2>
-  <div class="spec rv">
-    <div><span>Вид запчасти</span><b>Трансмиссия и привод</b></div>
-    <div><span>Производитель</span><b>ТЗА</b></div>
-    <div><span>Тип детали</span><b>КПП в сборе</b></div>
-    <div><span>Номер запчасти</span><b>21807</b></div>
-    <div><span>Состояние</span><b>Новое</b></div>
-    <div><span>Страна</span><b>Россия</b></div>
-    <div><span>Доступность</span><b>В наличии</b></div>
-    <div><span>Местоположение</span><b>Самара</b></div>
-  </div>
-</div></section>
+<dialog id="d-policy"><div class="in"><button class="lnk x" data-x>Закрыть</button><h2>Политика конфиденциальности</h2>
+<h4>1. Оператор</h4><p>Оператор персональных данных: <span class="ph">[ФИО / ИП, ИНН, ОГРНИП]</span>, Самара, Красноармейская ул., 76. Связь по вопросам данных: <span class="ph">[e-mail]</span>, +7 (902) 292-72-04.</p>
+<h4>2. Какие данные и зачем</h4><p>Имя, телефон, выбранная услуга и комментарий, которые вы указали в форме. Цели: записать вас на услугу и связаться по записи. Если вы отметили необязательную галочку, данные также используются для рассылки новостей.</p>
+<h4>3. Основание</h4><p>Ваше согласие. Оно даётся отдельной галочкой, не связано с офертой и не обязательно для просмотра сайта.</p>
+<h4>4. Хранение и передача</h4><p>Данные хранятся не дольше, чем нужно для записи и оказания услуги, и удаляются после отзыва согласия, если закон не требует иного. Мы не продаём данные и не передаём третьим лицам, кроме случаев, предусмотренных законом. При записи через сервис dikidi.net действует его политика. Базы данных граждан РФ размещаются на территории РФ.</p>
+<h4>5. Ваши права</h4><p>Вы можете запросить доступ к данным, исправление, удаление, а также отозвать согласие в любой момент, написав на адрес выше. Отзыв не влияет на законность обработки до его получения. Жалобу можно подать в Роскомнадзор.</p>
+<h4>6. Cookie</h4><p>Сайт сохраняет в браузере только ваш выбор по cookie. Аналитика и реклама не подключены. Выбор можно изменить по ссылке «Настройки cookie» внизу страницы.</p>
+<h4>7. Изменения</h4><p>Новая редакция публикуется на этой странице, дата последней редакции: <span class="ph">[дата]</span>.</p></div></dialog>
 
-<section><div class="wrap">
-  <h2 class="rv">Продавец <span>с репутацией</span></h2>
-  <div class="card rv seller">
-    <div class="ava">А</div>
-    <div><h3>АвтоСфера 163</h3><div class="stars">★★★★★ <span style="color:var(--tx);letter-spacing:0">5,0</span></div>
-    <p style="color:var(--mut)"><span class="num" data-n="245" style="font-size:1.4rem">0</span> отзывов · на Авито с 2017 года · отвечает около часа</p>
-    <p style="color:var(--mut)">Надёжный продавец · данные подтверждены · эковклад</p></div>
-  </div>
-</div></section>
+<dialog id="d-consent"><div class="in"><button class="lnk x" data-x>Закрыть</button><h2>Согласие на обработку персональных данных</h2>
+<p>Я, субъект персональных данных, свободно, своей волей и в своём интересе даю <span class="ph">[ФИО / ИП, ИНН]</span> (далее оператор) согласие на обработку моих персональных данных.</p>
+<h4>Данные</h4><p>Имя, номер телефона, выбранная услуга, текст комментария.</p>
+<h4>Цели</h4><p>Запись на услугу, подтверждение и изменение записи, связь со мной по вопросам услуги.</p>
+<h4>Действия</h4><p>Сбор, запись, систематизация, накопление, хранение, уточнение, использование, удаление.</p>
+<h4>Срок и отзыв</h4><p>Согласие действует до достижения целей или до отзыва. Отозвать его можно в любой момент письменно на <span class="ph">[e-mail]</span>. Это согласие не зависит от принятия оферты и рассылок.</p></div></dialog>
 
-<section id="catalog"><div class="wrap"><h2 class="rv">Другие коробки <span>в наличии</span></h2><div class="chips rv"><button class="chip on" data-f="all">Все</button><button class="chip" data-f="vesta">Веста</button><button class="chip" data-f="granta">Гранта</button><button class="chip" data-f="xray">Х-рей</button><button class="chip" data-f="largus">Ларгус</button><button class="chip" data-f="kalina">Калина</button><button class="chip" data-f="priora">Приора</button><button class="chip" data-f="niva">Нива</button></div><div class="cats"><div class="card cat rv hot" data-c="vesta"><div class="gi">⚙️</div><span class="bdg">Хит · эта коробка</span><h3>Кпп Лада Веста</h3><div class="pr">52 000 ₽</div><span class="pay">Оплата частями</span><a class="btn" href="tel:+79587681573" style="padding:10px 20px;margin-top:14px;font-size:.9rem">Узнать наличие</a></div><div class="card cat rv" data-c="priora"><div class="gi">⚙️</div><h3>Кпп Лада Приора</h3><div class="pr">25 500 ₽</div><span class="pay">Оплата частями</span><a class="btn" href="tel:+79587681573" style="padding:10px 20px;margin-top:14px;font-size:.9rem">Узнать наличие</a></div><div class="card cat rv" data-c="vesta granta"><div class="gi">⚙️</div><span class="bdg">Доставка от 1 дня</span><h3>Коробка передач АМТ Робот Веста, Гранта</h3><div class="pr">55 000 ₽</div><span class="pay">Оплата частями</span><a class="btn" href="tel:+79587681573" style="padding:10px 20px;margin-top:14px;font-size:.9rem">Узнать наличие</a></div><div class="card cat rv" data-c="vesta xray"><div class="gi">⚙️</div><h3>Кпп Робот Веста, Х-рей</h3><div class="pr">54 500 ₽</div><span class="pay">Оплата частями</span><a class="btn" href="tel:+79587681573" style="padding:10px 20px;margin-top:14px;font-size:.9rem">Узнать наличие</a></div><div class="card cat rv" data-c="kalina"><div class="gi">⚙️</div><h3>Кпп Лада Калина</h3><div class="pr">26 000 ₽</div><span class="pay">Оплата частями</span><a class="btn" href="tel:+79587681573" style="padding:10px 20px;margin-top:14px;font-size:.9rem">Узнать наличие</a></div><div class="card cat rv" data-c="vesta"><div class="gi">⚙️</div><h3>Кпп Веста JR5 515</h3><div class="pr">150 000 ₽</div><span class="pay">Оплата частями</span><a class="btn" href="tel:+79587681573" style="padding:10px 20px;margin-top:14px;font-size:.9rem">Узнать наличие</a></div><div class="card cat rv" data-c="niva"><div class="gi">⚙️</div><h3>Коробка передач Шевроле Нива, Нива…</h3><div class="pr">27 000 ₽</div><span class="pay">Оплата частями</span><a class="btn" href="tel:+79587681573" style="padding:10px 20px;margin-top:14px;font-size:.9rem">Узнать наличие</a></div><div class="card cat rv" data-c="largus xray"><div class="gi">⚙️</div><h3>Кпп Ларгус, Х-рей JR5 518, 519, 523, 525</h3><div class="pr">90 000 ₽</div><span class="pay">Оплата частями</span><a class="btn" href="tel:+79587681573" style="padding:10px 20px;margin-top:14px;font-size:.9rem">Узнать наличие</a></div><div class="card cat rv" data-c="vesta largus xray"><div class="gi">⚙️</div><h3>Кпп Веста 809 Ларгус, Икс-рей</h3><div class="pr">57 000 ₽</div><span class="pay">Оплата частями</span><a class="btn" href="tel:+79587681573" style="padding:10px 20px;margin-top:14px;font-size:.9rem">Узнать наличие</a></div><div class="card cat rv" data-c=""><div class="gi">⚙️</div><h3>Кпп JR5 / JH3</h3><div class="pr">70 000 ₽</div><span class="pay">Оплата частями</span><a class="btn" href="tel:+79587681573" style="padding:10px 20px;margin-top:14px;font-size:.9rem">Узнать наличие</a></div><div class="card cat rv" data-c="vesta"><div class="gi">⚙️</div><h3>Кпп Веста Рено JH3 514 / JR5 515</h3><div class="pr">100 000 ₽</div><span class="pay">Оплата частями</span><a class="btn" href="tel:+79587681573" style="padding:10px 20px;margin-top:14px;font-size:.9rem">Узнать наличие</a></div><div class="card cat rv" data-c="granta"><div class="gi">⚙️</div><h3>Кпп Гранта тросовая</h3><div class="pr">51 000 ₽</div><span class="pay">Оплата частями</span><a class="btn" href="tel:+79587681573" style="padding:10px 20px;margin-top:14px;font-size:.9rem">Узнать наличие</a></div></div><p class="rv" style="color:var(--mut);margin-top:18px;font-size:.9rem">Цены с Авито. Наличие и актуальную цену уточняйте по телефону +7 958 768-15-73.</p></div></section>
+<dialog id="d-offer"><div class="in"><button class="lnk x" data-x>Закрыть</button><h2>Публичная оферта</h2>
+<h4>1. Предмет</h4><p><span class="ph">[ФИО / ИП, ИНН, ОГРНИП]</span> (исполнитель) оказывает услуги окрашивания и ухода за волосами по адресу: Самара, Красноармейская ул., 76. Запись через сайт означает принятие этой оферты.</p>
+<h4>2. Запись и консультация</h4><p>Перед сложными видами окрашивания проводится консультация. Заявка на сайте не гарантирует время, пока исполнитель не подтвердил его по телефону или иным способом.</p>
+<h4>3. Стоимость</h4><p>Цены на сайте указаны для длины волос по плечи и средней густоты. Итоговая стоимость и время работы называются на консультации и зависят от длины, густоты и исходного состояния волос. Для сложного окрашивания может требоваться предоплата, её размер сообщается до внесения.</p>
+<h4>4. Перенос и отмена</h4><p>Клиент может перенести или отменить запись, предупредив исполнителя не позднее чем за <span class="ph">[срок]</span>. Условия возврата предоплаты: <span class="ph">[условия]</span>.</p>
+<h4>5. Результат</h4><p>Результат зависит от исходного цвета и состояния волос, исполнитель заранее обсуждает с клиентом ожидаемый оттенок. Клиент сообщает об аллергиях и противопоказаниях до начала работы.</p>
+<h4>6. Персональные данные</h4><p>Обработка данных описана в Политике конфиденциальности.</p></div></dialog>
 
-<section id="reviews"><div class="wrap"><h2 class="rv">Что пишут <span>покупатели</span></h2><div class="rvs"><div class="card rvc rv"><div class="who"><div class="av" style="background:#18b8d0">R</div><div><b>Radon</b><small>27 февраля · Покупатель</small></div></div><div class="stars">★★★★★<em>Сделка состоялась</em></div><p>Перед покупкой общался с Алексеем по телефону, очень грамотно отвечал на вопросы и был на связи на всех этапах сделки. После установки коробки на авто взамен неисправной неделю отъездил для сравнения — впечатление отличное…</p></div><div class="card rvc rv"><div class="who"><div class="av" style="background:#6bbf59">Е</div><div><b>Евгений</b><small>11 февраля · Покупатель</small></div></div><div class="stars">★★★★★<em>Сделка состоялась</em></div><p>Всё отлично! Поставлю на Весту СВ Кросс с самоблоком. Там посмотрю!</p></div><div class="card rvc rv"><div class="who"><div class="av" style="background:#9ccc65">А</div><div><b>Андрей</b><small>19 января · Покупатель</small></div></div><div class="stars">★★★★★<em>Сделка состоялась</em></div><p>Алексей, огромное спасибо, советую, не бойтесь, ещё есть в этой жизни люди, отвечающие за свои слова и действия!!!! Всё работает отлично!!!!</p></div><div class="card rvc rv"><div class="who"><div class="av" style="background:#8d6e63">А</div><div><b>Алексей Кирющенко</b><small>28 октября 2025 · Покупатель</small></div></div><div class="stars">★★★★★<em>Сделка состоялась</em></div><p>Созвонились с Алексеем, всё объяснил чётко и ясно, полный отчёт от заказа до получения на складе. Упаковано было хорошо, при отправлении отправили фото накладной, самой КПП, в общем парни знают своё дело и выполняют на 5+…</p></div><div class="card rvc rv"><div class="who"><div class="av" style="background:#ec407a">п</div><div><b>по объявлению</b><small>6 сентября 2025 · Покупатель</small></div></div><div class="stars">★★★★★<em>Сделка состоялась</em></div><p>Продавец грамотный, КПП отправил через 2 часа. Мне понравилось.</p></div></div><p class="rv" style="color:var(--mut);margin-top:18px;font-size:.9rem">Отзывы с Авито: 5,0 из 5, всего 245 отзывов.</p></div></section>
-
-<section id="buy"><div class="wrap">
-  <div class="cta rv">
-    <h2 style="margin-bottom:0">Заберите КПП за <span class="grad">52 000 ₽</span></h2>
-    <p>Звоните — ответим на все вопросы и подберём коробку, в том числе с самоблоком.</p>
-    <a class="btn" href="tel:+79587681573" style="font-size:1.25rem">📞 +7 958 768-15-73</a>
-    <div class="row" style="justify-content:center;margin-top:28px">
-      <a class="card" style="text-decoration:none;color:var(--tx);padding:16px 22px" href="https://yandex.ru/maps/?text=%D0%A1%D0%B0%D0%BC%D0%B0%D1%80%D0%B0%2C%2022%20%D0%9F%D0%B0%D1%80%D1%82%D1%81%D1%8A%D0%B5%D0%B7%D0%B4%D0%B0" target="_blank" rel="noopener">📍 Самарская обл., г. Самара, ул. 22 Партсъезда</a>
-    </div>
-  </div>
-  </div></section>
-
-<footer>© АвтоСфера 163 · г. Самара, ул. 22 Партсъезда · +7 958 768-15-73</footer>
+<div class="cb" id="cb" role="dialog" aria-label="Cookie"><b>Cookie</b><p style="margin:6px 0 0">Сайту нужно сохранить только ваш выбор. Аналитики и рекламы здесь нет. Любой вариант не мешает пользоваться сайтом.</p><div class="row"><button class="b" data-c="all">Принять все</button><button class="b" data-c="min">Только необходимые</button><button class="b" data-d="d-policy">Подробнее</button></div></div>
 
 <script>
 (function(){
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');var n=e.target.querySelector('[data-n]');if(n&&!n.d){n.d=1;var t=+n.dataset.n,i=0;var iv=setInterval(function(){i+=Math.ceil(t/40);if(i>=t){i=t;clearInterval(iv)}n.textContent=i},30)}}})},{threshold:.2});
-  document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
-
-  function gear(n,k){var R=100,ri=86,st=Math.PI*2/n,d='',i,a,p=function(r,t){return(r*Math.cos(t)).toFixed(2)+' '+(r*Math.sin(t)).toFixed(2)};
-    for(i=0;i<n;i++){a=i*st;d+=(i?'L':'M')+p(ri,a-.27*st)+'L'+p(R,a-.13*st)+'L'+p(R,a+.13*st)+'L'+p(ri,a+.27*st)+'L'+p(ri,a+.5*st)}
-    d+='Z';
-    function hole(cx,cy,r){return'M'+(cx-r)+' '+cy+'a'+r+' '+r+' 0 1 0 '+2*r+' 0a'+r+' '+r+' 0 1 0 '+(-2*r)+' 0Z'}
-    var h=hole(0,0,15),j,hs='';for(j=0;j<6;j++){var t=j*Math.PI/3;h+=hole(+(52*Math.cos(t)).toFixed(2),+(52*Math.sin(t)).toFixed(2),13)}
-    var g='m'+k,bolts='';for(j=0;j<6;j++){var t2=j*Math.PI/3+Math.PI/6;bolts+='<circle cx="'+(34*Math.cos(t2)).toFixed(1)+'" cy="'+(34*Math.sin(t2)).toFixed(1)+'" r="3.2" fill="#2b2f37" stroke="#9aa1ac" stroke-width=".8"/>'}
-    return '<svg viewBox="-106 -106 212 212"><defs><linearGradient id="'+g+'" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#eef1f5"/><stop offset=".35" stop-color="#9aa1ac"/><stop offset=".7" stop-color="#5b616c"/><stop offset="1" stop-color="#2d3139"/></linearGradient><radialGradient id="r'+g+'" cx=".3" cy=".25" r=".9"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset=".5" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".45"/></radialGradient></defs>'
-    +'<path d="'+d+'" fill="#1d2027" transform="scale(1.02)"/>'
-    +'<path d="'+d+h+'" fill="url(#'+g+')" fill-rule="evenodd" stroke="#14161b" stroke-width="1.6" stroke-linejoin="round"/>'
-    +'<path d="'+d+h+'" fill="url(#r'+g+')" fill-rule="evenodd"/>'
-    +'<circle r="'+ri+'" fill="none" stroke="#fff" stroke-opacity=".35" stroke-width="1.2"/><circle r="72" fill="none" stroke="#000" stroke-opacity=".45" stroke-width="2"/><circle r="70" fill="none" stroke="#fff" stroke-opacity=".3" stroke-width="1"/>'
-    +'<circle r="24" fill="none" stroke="#ff6a1a" stroke-opacity=".8" stroke-width="2.4"/>'+bolts
-    +'<circle r="15" fill="#0d0f13"/><rect x="-3" y="-20" width="6" height="8" fill="#0d0f13"/></svg>'}
-  document.querySelectorAll('.gears>div').forEach(function(el,i){el.innerHTML=gear(+el.dataset.t,i)});
-  var c=document.getElementById('fx'),x=c.getContext('2d'),W,H,P=[];
-  function rs(){W=c.width=innerWidth;H=c.height=innerHeight}rs();addEventListener('resize',rs);
-  for(var i=0;i<60;i++)P.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*2.5+.5,v:Math.random()*.6+.2,a:Math.random()*6});
-  (function f(){x.clearRect(0,0,W,H);P.forEach(function(p){p.y-=p.v;p.a+=.02;p.x+=Math.sin(p.a)*.4;if(p.y<-5){p.y=H+5;p.x=Math.random()*W}
-    x.beginPath();x.arc(p.x,p.y,p.r,0,7);x.fillStyle='rgba(255,140,40,'+(.25+Math.sin(p.a)*.2)+')';x.fill()});requestAnimationFrame(f)})();
+var hair=document.getElementById('hair'),rng=document.getElementById('rng'),cap=document.getElementById('cap');
+function upd(){var v=+rng.value;hair.style.setProperty('--s',v);
+cap.textContent=v<35?'Резкий контраст':v<70?'Мягкая растяжка':'Длинный плавный переход'}
+rng.addEventListener('input',upd);upd();
+var rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+// reveal
+var io=new IntersectionObserver(function(e){e.forEach(function(x,i){if(x.isIntersecting){setTimeout(function(){x.target.classList.add('in')},i*90);io.unobserve(x.target)}})},{threshold:.2});
+document.querySelectorAll('.rv').forEach(function(n){io.observe(n)});
+// tilt
+document.querySelectorAll('.card').forEach(function(c){
+c.addEventListener('pointermove',function(e){if(rm)return;var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform='perspective(700px) rotateY('+x*10+'deg) rotateX('+(-y*10)+'deg)'});
+c.addEventListener('pointerleave',function(){c.style.transform=''})});
+// legal dialogs
+document.addEventListener('click',function(e){var o=e.target.closest('[data-d]');if(o){var d=document.getElementById(o.dataset.d);if(d.showModal)d.showModal();else d.setAttribute('open','')}
+if(e.target.closest('[data-x]'))e.target.closest('dialog').close();if(e.target.tagName==='DIALOG')e.target.close()});
+// cookie choice
+var cb=document.getElementById('cb');
+function gs(){try{return localStorage.getItem('ck')}catch(x){return null}}
+function ss(v){try{localStorage.setItem('ck',v)}catch(x){}}
+if(!gs())cb.style.display='block';
+cb.addEventListener('click',function(e){var c=e.target.dataset.c;if(c){ss(c);cb.style.display='none'}});
+document.getElementById('cset').addEventListener('click',function(){cb.style.display='block'});
+// sparkle trail
+var last=0,ch=['✦','✧','✨','·'];
+function sp(x,y,n){for(var i=0;i<n;i++){var s=document.createElement('span');s.className='trail';s.textContent=ch[Math.random()*3|0];
+s.style.left=x+'px';s.style.top=y+'px';s.style.fontSize=(10+Math.random()*14)+'px';s.style.setProperty('--dx',(Math.random()*60-30)+'px');
+document.body.appendChild(s);setTimeout(function(a){a.remove()},900,s)}}
+if(!rm){addEventListener('pointermove',function(e){var t=Date.now();if(t-last>60){last=t;sp(e.clientX,e.clientY,1)}});
+addEventListener('click',function(e){sp(e.clientX,e.clientY,9)})}
 })();
-</script>
-<script>
-document.querySelectorAll('.chip').forEach(function(b){b.addEventListener('click',function(){
-document.querySelectorAll('.chip').forEach(function(x){x.classList.remove('on')});b.classList.add('on');var f=b.dataset.f;
-document.querySelectorAll('.cat').forEach(function(c){var ok=f==='all'||c.dataset.c.split(' ').indexOf(f)>-1;c.classList.toggle('off',!ok);if(ok)c.classList.add('in')})})});
 </script>
 </body>
 </html>
