@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>КПП Лада Веста 2180 — новая, 52 000 ₽</title>
+<style>
+:root{--bg:#0b0b12;--bg2:#14141f;--tx:#f4f4f8;--mut:#a5a5b8;--ac:#ff6a1a;--ac2:#ffb020;--card:rgba(255,255,255,.05);--bd:rgba(255,255,255,.1);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f6f4f0;--bg2:#ebe7e0;--tx:#16161d;--mut:#5d5d6c;--card:rgba(0,0,0,.04);--bd:rgba(0,0,0,.12)}}
+:root[data-theme="dark"]{--bg:#0b0b12;--bg2:#14141f;--tx:#f4f4f8;--mut:#a5a5b8}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{background:var(--bg);color:var(--tx);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6;overflow-x:hidden}
+canvas#fx,canvas#sg{position:fixed;inset:0;width:100%;height:100%;z-index:0;pointer-events:none}
+section,header,footer{position:relative;z-index:1;padding:80px 6%}
+.wrap{max-width:1100px;margin:auto}
+nav{position:fixed;top:0;left:0;right:0;z-index:10;display:flex;justify-content:space-between;align-items:center;padding:calc(12px + env(safe-area-inset-top,0px)) 6% 12px;backdrop-filter:blur(14px);background:color-mix(in srgb,var(--bg) 70%,transparent)}
+nav b{font-size:1.15rem;letter-spacing:.5px}nav b span{color:var(--ac)}
+.btn{display:inline-block;padding:14px 28px;border-radius:50px;background:linear-gradient(135deg,var(--ac),var(--ac2));color:#1a0f00;font-weight:700;text-decoration:none;border:0;cursor:pointer;position:relative;overflow:hidden;box-shadow:0 8px 30px rgba(255,106,26,.4);transition:transform .25s}
+.btn:hover{transform:translateY(-3px) scale(1.04)}
+.btn::after{content:"";position:absolute;top:0;left:-80%;width:50%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.6),transparent);transform:skewX(-20deg);animation:shine 3s infinite}
+@keyframes shine{to{left:140%}}
+.ghost{background:transparent;color:var(--tx);border:1.5px solid var(--bd);box-shadow:none}
+.ghost::after{display:none}
+.hero{min-height:100vh;display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center;padding-top:110px}
+.tag{display:inline-block;padding:6px 16px;border-radius:30px;border:1px solid var(--ac);color:var(--ac2);font-size:.85rem;margin-bottom:18px;animation:pulse 2.4s infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 10px rgba(255,106,26,0)}0%{box-shadow:0 0 0 0 rgba(255,106,26,.5)}}
+h1{font-size:clamp(2.4rem,6vw,4.6rem);line-height:1.05;font-weight:900}
+.grad{background:linear-gradient(90deg,var(--ac),var(--ac2),#ff3d71,var(--ac));background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:flow 6s linear infinite}
+@keyframes flow{to{background-position:300% 0}}
+.hero p{color:var(--mut);font-size:1.15rem;margin:20px 0 28px;max-width:520px}
+.price{font-size:2.6rem;font-weight:900;margin-bottom:6px}
+.price small{display:block;font-size:.95rem;font-weight:400;color:var(--mut)}
+.row{display:flex;gap:14px;flex-wrap:wrap;margin-top:22px}
+.gears{position:relative;aspect-ratio:1;max-width:460px;margin:auto;width:100%}
+.gears svg{position:absolute;filter:drop-shadow(0 0 25px rgba(255,106,26,.45))}
+.g1{width:68%;left:0;top:6%;animation:spin 16s linear infinite}
+.g2{width:46%;right:0;bottom:4%;animation:spin 11s linear infinite reverse}
+.g3{width:26%;right:6%;top:2%;animation:spin 7s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.gears canvas{position:absolute;inset:0;width:100%;height:100%;filter:drop-shadow(0 0 25px rgba(255,106,26,.45))}
+.gears.gl-on svg{display:none}
+#lq{display:block;width:100%;aspect-ratio:4/1;filter:drop-shadow(0 0 30px rgba(255,106,26,.35))}
+h2{font-size:clamp(1.8rem,4vw,2.8rem);margin-bottom:34px;font-weight:800}
+h2 span{color:var(--ac)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:22px;padding:26px;backdrop-filter:blur(8px);transition:transform .3s,border-color .3s,box-shadow .3s}
+.card:hover{transform:translateY(-8px) rotate(-.6deg);border-color:var(--ac);box-shadow:0 16px 40px rgba(255,106,26,.25)}
+.card .ic{font-size:2rem;display:block;margin-bottom:10px;animation:bob 3s ease-in-out infinite}
+@keyframes bob{50%{transform:translateY(-6px)}}
+.card h3{margin-bottom:6px}.card p{color:var(--mut);font-size:.95rem}
+.num{font-size:2.6rem;font-weight:900;color:var(--ac2)}
+.spec{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:0 40px;max-width:800px}
+.spec div{display:flex;justify-content:space-between;gap:12px;padding:14px 0;border-bottom:1px dashed var(--bd)}
+.spec span{color:var(--mut)}
+.seller{display:flex;gap:22px;align-items:center;flex-wrap:wrap}
+.ava{width:78px;height:78px;border-radius:50%;background:linear-gradient(135deg,#4caf50,#2e7d32);display:grid;place-items:center;font-size:2rem;font-weight:800;color:#fff;animation:pulse 3s infinite}
+.stars{color:var(--ac2);letter-spacing:3px}
+.cta{text-align:center;background:linear-gradient(135deg,rgba(255,106,26,.18),rgba(255,61,113,.14));border:1px solid var(--bd);border-radius:32px;padding:60px 6%}
+.cta p{color:var(--mut);margin:12px 0 26px}
+footer{text-align:center;color:var(--mut);font-size:.9rem;padding:40px 6%}
+.rv{opacity:0;transform:translateY(40px);transition:opacity .8s,transform .8s}
+.rv.in{opacity:1;transform:none}
+@media(max-width:820px){.hero{grid-template-columns:1fr;text-align:left}.gears{max-width:320px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+.lead{max-width:520px;margin:0 auto;text-align:left;display:grid;gap:12px}
+.fld{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:560px){.fld{grid-template-columns:1fr}}
+.lead input[type=text],.lead input[type=tel]{width:100%;padding:13px 16px;border-radius:14px;border:1px solid var(--bd);background:var(--card);color:var(--tx);font:inherit}
+.chk{display:flex;gap:10px;align-items:flex-start;font-size:.85rem;color:var(--mut);cursor:pointer}
+.chk input{margin-top:3px;width:18px;height:18px;accent-color:var(--ac);flex:none}
+.chk a,footer a,.ck a{color:var(--ac2);text-decoration:underline;cursor:pointer}
+.lead .btn{justify-self:center}
+.btn:disabled{opacity:.45;cursor:not-allowed;transform:none;box-shadow:none}
+.cta .note{font-size:.85rem;min-height:1.2em;text-align:center;margin:0}
+.ck{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:30;max-width:760px;margin:auto;display:flex;gap:14px;align-items:center;flex-wrap:wrap;padding:16px 18px;border-radius:20px;background:var(--bg2);border:1px solid var(--bd);box-shadow:0 10px 40px rgba(0,0,0,.35);font-size:.88rem}
+.ck[hidden]{display:none}
+.ck p{flex:1 1 280px;margin:0}
+.ck .btn{padding:10px 20px;font-size:.9rem}
+.ck .ghost{color:var(--tx)}
+dialog{margin:auto;width:min(760px,92vw);max-height:85vh;padding:0;border:1px solid var(--bd);border-radius:22px;background:var(--bg2);color:var(--tx)}
+dialog::backdrop{background:rgba(0,0,0,.6);backdrop-filter:blur(4px)}
+.dh{position:sticky;top:0;display:flex;justify-content:space-between;gap:12px;align-items:center;padding:16px 22px;background:var(--bg2);border-bottom:1px solid var(--bd)}
+.dh button{background:none;border:0;color:var(--tx);font-size:1.3rem;cursor:pointer}
+#db{padding:6px 22px 24px;font-size:.92rem}
+#db h4{margin:18px 0 6px}
+#db p{margin:6px 0;color:var(--mut)}
+#db mark{background:rgba(255,176,32,.25);color:var(--tx);padding:0 4px;border-radius:4px}
+footer .fl{margin-top:8px;display:flex;gap:6px 16px;justify-content:center;flex-wrap:wrap}
+</style>
+</head>
+<body>
+<canvas id="sg"></canvas>
+<canvas id="fx"></canvas>
+<nav><b>АВТО<span>СФЕРА</span> 163</b><a class="btn" href="#buy" style="padding:10px 20px">Купить</a></nav>
+
+<header class="hero wrap">
+  <div>
+    <span class="tag">● В наличии · несколько штук</span>
+    <h1>Новая КПП<br><span class="grad">Лада Веста 2180</span></h1>
+    <p>Собрана из заводских комплектующих. С гарантией. Отправляем транспортной компанией по всей России.</p>
+    <div class="price">52 000 ₽<small>или 4 334 ₽ × 12 месяцев без переплаты и первого взноса</small></div>
+    <div class="row"><a class="btn" href="#buy">Заказать коробку</a><a class="btn ghost" href="#spec">Характеристики</a></div>
+  </div>
+  <div class="gears" aria-hidden="true">
+    <svg class="g1" viewBox="-50 -50 100 100"><g fill="none" stroke="#ff6a1a" stroke-width="3"><circle r="30"/><circle r="12" stroke="#ffb020"/><path id="t" d="M0-30V-42M0 30V42M-30 0H-42M30 0H42M21-21L30-30M-21 21L-30 30M21 21L30 30M-21-21L-30-30" stroke-width="9" stroke-linecap="round"/></g></svg>
+    <svg class="g2" viewBox="-50 -50 100 100"><g fill="none" stroke="#ffb020" stroke-width="3"><circle r="30"/><circle r="10" stroke="#ff3d71"/><path d="M0-30V-42M0 30V42M-30 0H-42M30 0H42M21-21L30-30M-21 21L-30 30M21 21L30 30M-21-21L-30-30" stroke-width="9" stroke-linecap="round"/></g></svg>
+    <svg class="g3" viewBox="-50 -50 100 100"><g fill="none" stroke="#ff3d71" stroke-width="4"><circle r="28"/><path d="M0-28V-42M0 28V42M-28 0H-42M28 0H42M20-20L30-30M-20 20L-30 30M20 20L30 30M-20-20L-30-30" stroke-width="10" stroke-linecap="round"/></g></svg>
+  </div>
+</header>
+
+<section style="padding-top:10px;padding-bottom:20px"><div class="wrap">
+  <canvas id="lq" class="rv" role="img" aria-label="АвтоСфера 163"></canvas>
+  <p class="rv" style="text-align:center;color:var(--mut);margin-top:6px">Запчасти для Лада Веста · Самара</p>
+</div></section>
+
+<section><div class="wrap">
+  <h2 class="rv">Почему берут <span>у нас</span></h2>
+  <div class="stats">
+    <div class="card rv"><span class="ic">🆕</span><h3>Совершенно новая</h3><p>Не б/у и не восстановленная — состояние «Новое».</p></div>
+    <div class="card rv"><span class="ic">🏭</span><h3>Завод ТЗА</h3><p>Тольяттинский завод автоагрегатов, сделано в России.</p></div>
+    <div class="card rv"><span class="ic">🛡️</span><h3>Гарантия</h3><p>Коробка собрана из заводских комплектующих и идёт с гарантией.</p></div>
+    <div class="card rv"><span class="ic">🚚</span><h3>Доставка по России</h3><p>Отправляем транспортной компанией. Есть Авито Доставка.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2 class="rv">Под заказ — <span>с самоблоком</span></h2>
+  <div class="card rv" style="max-width:760px"><span class="ic">🔧</span><p style="font-size:1.1rem;color:var(--tx)">Также можно собрать под заказ КПП с самоблоком. Это исключает такую проблему, как пробитие корпуса.</p></div>
+</div></section>
+
+<section id="spec"><div class="wrap">
+  <h2 class="rv"><span>Характеристики</span></h2>
+  <div class="spec rv">
+    <div><span>Вид запчасти</span><b>Трансмиссия и привод</b></div>
+    <div><span>Производитель</span><b>ТЗА</b></div>
+    <div><span>Тип детали</span><b>КПП в сборе</b></div>
+    <div><span>Номер запчасти</span><b>21807</b></div>
+    <div><span>Состояние</span><b>Новое</b></div>
+    <div><span>Страна</span><b>Россия</b></div>
+    <div><span>Доступность</span><b>В наличии</b></div>
+    <div><span>Местоположение</span><b>Самара</b></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <h2 class="rv">Продавец <span>с репутацией</span></h2>
+  <div class="card rv seller">
+    <div class="ava">А</div>
+    <div><h3>АвтоСфера 163</h3><div class="stars">★★★★★ <span style="color:var(--tx);letter-spacing:0">5,0</span></div>
+    <p style="color:var(--mut)"><span class="num" data-n="245" style="font-size:1.4rem">0</span> отзывов · на Авито с 2017 года · отвечает около часа</p>
+    <p style="color:var(--mut)">Надёжный продавец · данные подтверждены · эковклад</p></div>
+  </div>
+</div></section>
+
+<section id="buy"><div class="wrap">
+  <div class="cta rv">
+    <h2 style="margin-bottom:0">Заберите КПП за <span class="grad">52 000 ₽</span></h2>
+    <p>Напишите нам на Авито — ответим примерно в течение часа.</p>
+    <form id="lead" class="lead" novalidate>
+      <div class="fld"><input type="text" id="ln" placeholder="Ваше имя" autocomplete="name" maxlength="60" required><input type="tel" id="lp" placeholder="+7 900 000-00-00" autocomplete="tel" required></div>
+      <label class="chk"><input type="checkbox" id="c1"><span>Я даю <a data-doc="consent">согласие на обработку персональных данных</a> (имя, телефон) для связи со мной</span></label>
+      <label class="chk"><input type="checkbox" id="c2"><span>Я ознакомлен(а) с <a data-doc="privacy">Политикой конфиденциальности</a> и принимаю <a data-doc="terms">Пользовательское соглашение</a></span></label>
+      <button class="btn" id="ls" type="submit" disabled>Отправить заявку</button>
+      <p class="note" id="lm" role="status"></p>
+    </form>
+  </div>
+</div></section>
+
+<footer>
+  <div>© АвтоСфера 163 · Самара · Запчасти для Лада Веста</div>
+  <div class="fl"><a data-doc="privacy">Политика конфиденциальности</a><a data-doc="consent">Согласие на обработку ПДн</a><a data-doc="terms">Пользовательское соглашение</a><a id="ckset">Настройки cookie</a></div>
+  <div style="margin-top:8px;font-size:.8rem">Информация на сайте не является публичной офертой (ст. 437 ГК РФ).</div>
+</footer>
+
+<script>
+(function(){
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');var n=e.target.querySelector('[data-n]');if(n&&!n.d){n.d=1;var t=+n.dataset.n,i=0;var iv=setInterval(function(){i+=Math.ceil(t/40);if(i>=t){i=t;clearInterval(iv)}n.textContent=i},30)}}})},{threshold:.2});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el)});
+  var c=document.getElementById('fx'),x=c.getContext('2d'),W,H,P=[];
+  function rs(){W=c.width=innerWidth;H=c.height=innerHeight}rs();addEventListener('resize',rs);
+  for(var i=0;i<60;i++)P.push({x:Math.random()*W,y:Math.random()*H,r:Math.random()*2.5+.5,v:Math.random()*.6+.2,a:Math.random()*6});
+  (function f(){x.clearRect(0,0,W,H);P.forEach(function(p){p.y-=p.v;p.a+=.02;p.x+=Math.sin(p.a)*.4;if(p.y<-5){p.y=H+5;p.x=Math.random()*W}
+    x.beginPath();x.arc(p.x,p.y,p.r,0,7);x.fillStyle='rgba(255,140,40,'+(.25+Math.sin(p.a)*.2)+')';x.fill()});requestAnimationFrame(f)})();
+})();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function(){
+try{
+var box=document.querySelector('.gears');if(!box||!window.THREE)return;
+var T=THREE,cv=document.createElement('canvas'),r=new T.WebGLRenderer({canvas:cv,alpha:true,antialias:true});
+r.setPixelRatio(Math.min(devicePixelRatio,2));
+box.appendChild(cv);box.classList.add('gl-on');
+var sc=new T.Scene(),cam=new T.PerspectiveCamera(40,1,.1,50);cam.position.set(0,0,8);
+sc.add(new T.AmbientLight(0xffffff,.65));
+var l1=new T.PointLight(0xffa060,1.3);l1.position.set(4,4,6);sc.add(l1);
+var l2=new T.PointLight(0xff3d71,.9);l2.position.set(-5,-3,4);sc.add(l2);
+function gear(n,ro,ri,hole,col){
+  var s=new T.Shape(),st=Math.PI*2/n,k=[[0,ri],[.15,ro],[.45,ro],[.6,ri]],first=true;
+  for(var i=0;i<n;i++)k.forEach(function(p){var a=(i+p[0])*st,x=Math.cos(a)*p[1],y=Math.sin(a)*p[1];if(first){s.moveTo(x,y);first=false}else s.lineTo(x,y)});
+  s.closePath();
+  var h=new T.Path();h.absarc(0,0,hole,0,Math.PI*2,true);s.holes.push(h);
+  var g=new T.ExtrudeGeometry(s,{depth:.4,bevelEnabled:true,bevelSize:.04,bevelThickness:.04,bevelSegments:2});
+  g.translate(0,0,-.2);
+  return new T.Mesh(g,new T.MeshStandardMaterial({color:col,metalness:.55,roughness:.35,emissive:col,emissiveIntensity:.12}));
+}
+var G=new T.Group(),a=gear(16,1.6,1.35,.5,0xff6a1a),b=gear(11,1.12,.9,.35,0xffb020),c=gear(6,.62,.46,.2,0xff3d71);
+a.position.set(-.8,.3,0);b.position.set(1.29,-1.16,0);c.position.set(.38,1.99,0);
+G.add(a,b,c);G.position.set(-.4,-.2,0);G.rotation.x=-.3;G.rotation.y=.3;sc.add(G);
+var tx=0,ty=0;
+addEventListener('pointermove',function(e){tx=e.clientX/innerWidth-.5;ty=e.clientY/innerHeight-.5});
+function rs(){var w=box.clientWidth,h=box.clientHeight;if(!w||!h)return;r.setSize(w,h,false);cam.aspect=w/h;cam.updateProjectionMatrix();r.render(sc,cam)}
+new ResizeObserver(rs).observe(box);rs();
+if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+var clk=new T.Clock();
+(function loop(){
+  var d=Math.min(clk.getDelta(),.05);
+  a.rotation.z+=.4*d;b.rotation.z-=.4*d*16/11;c.rotation.z-=.4*d*16/6;
+  G.rotation.y+=(.3+tx*.7-G.rotation.y)*.05;G.rotation.x+=(-.3+ty*.5-G.rotation.x)*.05;
+  r.render(sc,cam);requestAnimationFrame(loop);
+})();
+}catch(e){}
+})();
+</script>
+<script>
+(function(){
+try{
+if(!window.THREE)return;
+var T=THREE,cv=document.getElementById('sg'),r=new T.WebGLRenderer({canvas:cv,alpha:true,antialias:false});
+r.setPixelRatio(Math.min(devicePixelRatio,1.5));
+var sc=new T.Scene(),cam=new T.PerspectiveCamera(45,1,.1,100);cam.position.set(0,-7,5.5);cam.lookAt(0,0,0);
+var u={t:{value:0},dark:{value:matchMedia('(prefers-color-scheme: light)').matches?0:1}};
+var m=new T.ShaderMaterial({uniforms:u,transparent:true,depthWrite:false,
+ vertexShader:'uniform float t;varying float vD;varying vec2 vUv;float n(vec2 p){return sin(p.x*1.3+t)*cos(p.y*1.1-t*.8)+.5*sin(p.x*2.7-p.y*2.1+t*1.3)+.25*sin(p.y*4.1+p.x*3.3-t*1.7);}void main(){vUv=uv;vec3 p=position;float d=n(p.xy*.35);p.z+=d*1.6;vD=d*.4+.5;gl_Position=projectionMatrix*modelViewMatrix*vec4(p,1.);}',
+ fragmentShader:'uniform float t,dark;varying float vD;varying vec2 vUv;float h(vec2 p){return fract(sin(dot(p,vec2(12.9898,78.233)))*43758.5453);}void main(){vec3 c1=vec3(1.,.416,.102),c2=vec3(1.,.69,.125),c3=vec3(1.,.239,.443);float k=clamp(vD,0.,1.);vec3 col=mix(c3,c1,smoothstep(0.,.5,k));col=mix(col,c2,smoothstep(.5,1.,k));col*=.55+.7*k;col+=(h(gl_FragCoord.xy+t)-.5)*.08;gl_FragColor=vec4(col,mix(.3,.42,dark));}'});
+var mesh=new T.Mesh(new T.PlaneGeometry(28,28,140,140),m);sc.add(mesh);
+function rs(){r.setSize(innerWidth,innerHeight,false);cam.aspect=innerWidth/innerHeight;cam.updateProjectionMatrix();r.render(sc,cam)}
+addEventListener('resize',rs);rs();
+if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+var mx=0,clk=new T.Clock();
+addEventListener('pointermove',function(e){mx=e.clientX/innerWidth-.5});
+(function loop(){u.t.value=clk.getElapsedTime()*.35;mesh.rotation.z+=(mx*.5-mesh.rotation.z)*.03;r.render(sc,cam);requestAnimationFrame(loop)})();
+}catch(e){}
+})();
+</script>
+<script>
+(function(){
+try{
+var cv=document.getElementById('lq');if(!cv||!window.THREE)return;
+var T=THREE,W=2048,H=512,tc=document.createElement('canvas');tc.width=W;tc.height=H;
+var x=tc.getContext('2d'),s='АВТОСФЕРА 163',fs=300,ff='system-ui,"Segoe UI",Arial,sans-serif';
+x.font='900 '+fs+'px '+ff;fs=Math.floor(fs*Math.min(1,W*.92/x.measureText(s).width));
+x.font='900 '+fs+'px '+ff;x.textAlign='center';x.textBaseline='middle';x.fillStyle='#fff';x.fillText(s,W/2,H/2+fs*.04);
+var tex=new T.CanvasTexture(tc);tex.minFilter=T.LinearFilter;tex.generateMipmaps=false;
+var r=new T.WebGLRenderer({canvas:cv,alpha:true,antialias:false});r.setPixelRatio(Math.min(devicePixelRatio,1.5));
+var u={tex:{value:tex},t:{value:3},px:{value:new T.Vector2(1/W,1/H)},m:{value:new T.Vector2(0,0)}};
+var mat=new T.ShaderMaterial({uniforms:u,transparent:true,depthWrite:false,
+ vertexShader:'varying vec2 vUv;void main(){vUv=uv;gl_Position=vec4(position.xy,0.,1.);}',
+ fragmentShader:'uniform sampler2D tex;uniform float t;uniform vec2 px,m;varying vec2 vUv;float A(vec2 p){return texture2D(tex,p).a;}float D(vec2 p){float s=0.;for(int i=0;i<14;i++){float a=float(i)*2.39996;float r=(float(i)+1.)/14.;s+=A(p+vec2(cos(a),sin(a))*r*18.*px);}return s/14.;}void main(){vec2 uv=vUv;float a=A(uv);float d=D(uv);float dx=D(uv+vec2(2.*px.x,0.))-d;float dy=D(uv+vec2(0.,2.*px.y))-d;vec2 g=vec2(dx,dy)*25.;float ph=uv.x*5.+uv.y*2.+d*4.5+t+m.x*2.+1.1*sin(uv.y*8.+t*1.3+d*5.)+g.x*.6;vec3 w=vec3(.5+.5*sin(ph),.5+.5*sin(ph+.35),.5+.5*sin(ph+.7));float s=w.g;vec3 c1=vec3(1.,.416,.102),c2=vec3(1.,.8,.25),c3=vec3(1.,.239,.443);vec3 col=mix(vec3(.1,.05,.03),mix(c1,c2,s),smoothstep(.1,.7,s));col=mix(col,c3,smoothstep(.65,1.,w.r)*.5);vec3 n=normalize(vec3(-g,1.));float sp=pow(max(dot(n,normalize(vec3(.4,.6,.7))),0.),24.);col+=sp*.9;col+=vec3(1.,.7,.4)*(1.-smoothstep(.55,.95,d))*.25;gl_FragColor=vec4(col,smoothstep(.4,.6,a));}'});
+var sc=new T.Scene(),cam=new T.OrthographicCamera(-1,1,1,-1,0,1);sc.add(new T.Mesh(new T.PlaneGeometry(2,2),mat));
+function rs(){var w=cv.clientWidth,h=cv.clientHeight;if(w&&h){r.setSize(w,h,false);r.render(sc,cam)}}
+new ResizeObserver(rs).observe(cv);rs();
+if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+var vis=true,clk=new T.Clock();
+new IntersectionObserver(function(e){vis=e[0].isIntersecting}).observe(cv);
+addEventListener('pointermove',function(e){u.m.value.x=e.clientX/innerWidth-.5});
+(function loop(){if(vis){u.t.value=3+clk.getElapsedTime()*.5;r.render(sc,cam)}requestAnimationFrame(loop)})();
+}catch(e){}
+})();
+</script>
+<dialog id="doc" aria-labelledby="dt"><div class="dh"><b id="dt"></b><button id="dx" type="button" aria-label="Закрыть">✕</button></div><div id="db"></div></dialog>
+<div class="ck" id="ck" role="dialog" aria-label="Cookie" hidden><p>Сайт использует файлы cookie и локальное хранилище браузера. Необходимые нужны для работы сайта, аналитические и маркетинговые (если будут подключены) — только с вашего согласия. Подробнее — в <a data-doc="privacy">Политике конфиденциальности</a>.</p><div style="display:flex;gap:10px;flex-wrap:wrap"><button class="btn ghost" id="ckn" type="button">Только необходимые</button><button class="btn" id="cka" type="button">Принять все</button></div></div>
+<script>
+(function(){
+var OP='<mark>[ФИО самозанятого / ИП или наименование организации, ИНН, ОГРНИП — заполнить]</mark>',EM='<mark>[e-mail — заполнить]</mark>',PH='+7 958 768-15-73',D={};
+D.privacy=['Политика в отношении обработки персональных данных','<p>Редакция от 24.11.2026</p><h4>1. Общие положения</h4><p>Политика составлена в соответствии с Федеральным законом от 27.07.2006 № 152-ФЗ «О персональных данных» и определяет порядок обработки персональных данных посетителей сайта. Оператор: '+OP+' (далее — Оператор). Контакты: тел. '+PH+', e-mail '+EM+', г. Самара.</p><h4>2. Какие данные и зачем</h4><p>Имя и номер телефона, которые вы сами указываете в форме заявки; технические данные (IP-адрес, тип браузера и устройства, дата и время визита, cookie). Цели: связаться с вами по заявке, ответить на вопросы о товаре, оформить продажу и доставку, обеспечить работу и безопасность сайта.</p><h4>3. Правовые основания</h4><p>Ваше согласие (ст. 6 и 9 152-ФЗ); заключение и исполнение договора, стороной которого вы являетесь или хотите стать.</p><h4>4. Порядок обработки</h4><p>Сбор, запись, систематизация, хранение, использование, передача (только транспортным компаниям для доставки заказа и в случаях, предусмотренных законом), удаление. Данные записываются и хранятся в базах на территории РФ, не продаются и не передаются третьим лицам в рекламных целях. Принимаются правовые, организационные и технические меры защиты. Срок хранения — до достижения целей обработки или отзыва согласия, если закон не требует иного.</p><h4>5. Cookie</h4><p>Сайт может использовать cookie и localStorage: необходимые (запоминают ваш выбор по cookie и обеспечивают работу сайта) и, только после вашего согласия в баннере, аналитические и маркетинговые. Выбор можно изменить через «Настройки cookie» внизу сайта или в настройках браузера.</p><h4>6. Ваши права</h4><p>Вы вправе получить сведения об обработке ваших данных, требовать их уточнения, блокирования или удаления, отозвать согласие (ст. 14, 20, 21 152-ФЗ). Направьте запрос на '+EM+' или позвоните '+PH+'. Срок ответа — до 10 рабочих дней. Вы также можете обратиться в Роскомнадзор или в суд.</p><h4>7. Изменения</h4><p>Оператор вправе изменять Политику. Актуальная версия всегда доступна на этой странице.</p>'];
+D.consent=['Согласие на обработку персональных данных','<p>Я, действуя свободно, своей волей и в своём интересе, в соответствии со ст. 9 Федерального закона № 152-ФЗ «О персональных данных» даю '+OP+' (далее — Оператор; тел. '+PH+', e-mail '+EM+') согласие на обработку моих персональных данных: имя, номер телефона.</p><p><b>Цель:</b> обратная связь по моей заявке, консультация, оформление продажи и доставки товара.</p><p><b>Действия:</b> сбор, запись, систематизация, накопление, хранение, уточнение, использование, передача транспортным компаниям для доставки, блокирование, удаление.</p><p><b>Срок:</b> до достижения цели обработки или до отзыва согласия. Согласие можно отозвать в любой момент, направив Оператору заявление на '+EM+' или сообщив по тел. '+PH+'.</p>'];
+D.terms=['Пользовательское соглашение','<p>Редакция от 24.11.2026</p><h4>1. Предмет</h4><p>Соглашение регулирует использование сайта «АвтоСфера 163» (далее — Сайт). Используя Сайт, вы принимаете его условия; если не согласны — прекратите использование.</p><h4>2. Информационный характер</h4><p>Сайт носит информационный характер. Цены, наличие, характеристики, условия доставки и оплаты могут меняться и не являются публичной офертой (ст. 437 ГК РФ). Условия сделки уточняйте у продавца по тел. '+PH+'.</p><h4>3. Интеллектуальные права</h4><p>Тексты, оформление и иные материалы Сайта охраняются законом. Копирование и распространение без согласия правообладателя запрещены, кроме личного использования.</p><h4>4. Обязанности пользователя</h4><p>Указывать достоверные данные, не нарушать работу Сайта и не передавать через него чужие персональные данные без законных оснований.</p><h4>5. Ответственность</h4><p>Сайт предоставляется «как есть». Оператор не отвечает за временные перебои в работе Сайта; фотографии и описания могут незначительно отличаться от товара. Права потребителей, установленные законодательством РФ, не ограничиваются.</p><h4>6. Применимое право</h4><p>Соглашение регулируется законодательством РФ. Споры решаются путём переговоров, а при недостижении согласия — в порядке, установленном законодательством РФ.</p><h4>7. Реквизиты</h4><p>'+OP+'; тел. '+PH+'; e-mail '+EM+'; г. Самара.</p>'];
+var dl=document.getElementById('doc'),dt=document.getElementById('dt'),db=document.getElementById('db');
+document.addEventListener('click',function(e){var a=e.target.closest('[data-doc]');if(a){e.preventDefault();var d=D[a.dataset.doc];dt.textContent=d[0];db.innerHTML=d[1];dl.showModal();dl.scrollTop=0}});
+document.getElementById('dx').onclick=function(){dl.close()};
+dl.addEventListener('click',function(e){if(e.target===dl)dl.close()});
+function st(k,v){try{if(v===undefined)return localStorage.getItem(k);if(v===null)localStorage.removeItem(k);else localStorage.setItem(k,v)}catch(e){}return null}
+var ck=document.getElementById('ck');
+window.cookieConsent=st('ck');ck.hidden=!!window.cookieConsent;
+function pick(v){st('ck',v);window.cookieConsent=v;ck.hidden=true}
+document.getElementById('cka').onclick=function(){pick('all')};
+document.getElementById('ckn').onclick=function(){pick('necessary')};
+document.getElementById('ckset').onclick=function(e){e.preventDefault();st('ck',null);window.cookieConsent=null;ck.hidden=false};
+var ENDPOINT='',f=document.getElementById('lead'),c1=document.getElementById('c1'),c2=document.getElementById('c2'),b=document.getElementById('ls'),m=document.getElementById('lm');
+function up(){b.disabled=!(c1.checked&&c2.checked)}
+c1.onchange=c2.onchange=up;
+f.addEventListener('submit',function(e){e.preventDefault();
+ var n=document.getElementById('ln').value.trim(),p=document.getElementById('lp').value.trim();
+ if(!c1.checked||!c2.checked){m.textContent='Отметьте согласия, чтобы отправить заявку.';return}
+ if(n.length<2||p.replace(/\D/g,'').length<10){m.textContent='Проверьте имя и номер телефона.';return}
+ if(!ENDPOINT){m.textContent='Форма пока не подключена к приёму заявок. Позвоните: '+PH;return}
+ b.disabled=true;
+ fetch(ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name:n,phone:p,consent:true,policy:true,ts:new Date().toISOString()})})
+ .then(function(r){if(!r.ok)throw 0;m.textContent='Спасибо! Мы свяжемся с вами в ближайшее время.';f.reset()})
+ .catch(function(){m.textContent='Не удалось отправить. Позвоните: '+PH})
+ .then(up);
+});
+})();
+</script>
+</body>
+</html>
