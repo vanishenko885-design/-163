@@ -129,6 +129,15 @@ footer .fl{margin-top:8px;display:flex;gap:6px 16px;justify-content:center;flex-
   <div class="card rv" style="max-width:760px"><span class="ic">🔧</span><p style="font-size:1.1rem;color:var(--tx)">Также можно собрать под заказ КПП с самоблоком. Это исключает такую проблему, как пробитие корпуса.</p></div>
 </div></section>
 
+<section id="buy"><div class="wrap">
+  <div class="cta rv">
+    <h2 style="margin-bottom:0">Заберите КПП за <span class="grad">52 000 ₽</span></h2>
+    <p>Полное объявление, фото и отзывы — на Авито. Там же можно написать продавцу и заказать Авито Доставку.</p>
+    <!-- ВСТАВЬ СЮДА ССЫЛКУ НА ОБЪЯВЛЕНИЕ АВИТО -->
+    <a class="btn" id="avito" href="https://www.avito.ru/" target="_blank" rel="noopener noreferrer">Открыть объявление на Авито</a>
+  </div>
+</div></section>
+
 <section id="spec"><div class="wrap">
   <h2 class="rv"><span>Характеристики</span></h2>
   <div class="spec rv">
@@ -149,21 +158,8 @@ footer .fl{margin-top:8px;display:flex;gap:6px 16px;justify-content:center;flex-
     <div class="ava">А</div>
     <div><h3>АвтоСфера 163</h3><div class="stars">★★★★★ <span style="color:var(--tx);letter-spacing:0">5,0</span></div>
     <p style="color:var(--mut)"><span class="num" data-n="245" style="font-size:1.4rem">0</span> отзывов · на Авито с 2017 года · отвечает около часа</p>
-    <p style="color:var(--mut)">Надёжный продавец · данные подтверждены · эковклад</p></div>
-  </div>
-</div></section>
-
-<section id="buy"><div class="wrap">
-  <div class="cta rv">
-    <h2 style="margin-bottom:0">Заберите КПП за <span class="grad">52 000 ₽</span></h2>
-    <p>Напишите нам на Авито — ответим примерно в течение часа.</p>
-    <form id="lead" class="lead" novalidate>
-      <div class="fld"><input type="text" id="ln" placeholder="Ваше имя" autocomplete="name" maxlength="60" required><input type="tel" id="lp" placeholder="+7 900 000-00-00" autocomplete="tel" required></div>
-      <label class="chk"><input type="checkbox" id="c1"><span>Я даю <a data-doc="consent">согласие на обработку персональных данных</a> (имя, телефон) для связи со мной</span></label>
-      <label class="chk"><input type="checkbox" id="c2"><span>Я ознакомлен(а) с <a data-doc="privacy">Политикой конфиденциальности</a> и принимаю <a data-doc="terms">Пользовательское соглашение</a></span></label>
-      <button class="btn" id="ls" type="submit" disabled>Отправить заявку</button>
-      <p class="note" id="lm" role="status"></p>
-    </form>
+    <p style="color:var(--mut)">Надёжный продавец · данные подтверждены · эковклад</p>
+    <p style="color:var(--mut)">Самара · тел. <a href="tel:+79587681573" style="color:var(--ac2)">+7 958 768-15-73</a></p></div>
   </div>
 </div></section>
 
@@ -288,7 +284,7 @@ function pick(v){st('ck',v);window.cookieConsent=v;ck.hidden=true}
 document.getElementById('cka').onclick=function(){pick('all')};
 document.getElementById('ckn').onclick=function(){pick('necessary')};
 document.getElementById('ckset').onclick=function(e){e.preventDefault();st('ck',null);window.cookieConsent=null;ck.hidden=false};
-var ENDPOINT='',f=document.getElementById('lead'),c1=document.getElementById('c1'),c2=document.getElementById('c2'),b=document.getElementById('ls'),m=document.getElementById('lm');
+var ENDPOINT='',f=document.getElementById('lead');if(!f)return;var c1=document.getElementById('c1'),c2=document.getElementById('c2'),b=document.getElementById('ls'),m=document.getElementById('lm');
 function up(){b.disabled=!(c1.checked&&c2.checked)}
 c1.onchange=c2.onchange=up;
 f.addEventListener('submit',function(e){e.preventDefault();
