@@ -228,6 +228,13 @@ footer .fl{margin-top:8px;display:flex;gap:6px 16px;justify-content:center;flex-
 .tel.big svg{color:#fff}.tel.big:hover{background:#fff;color:#c2410c}.tel.big:hover svg{color:#c2410c}
 @media(max-width:900px){nav .tel span{display:none}nav .tel{padding:10px;width:44px;height:44px;justify-content:center}}
 @media(max-width:820px){.tc.intro>p,.tc.intro .price small{display:none}.tc.intro .tag{font-size:.75rem;padding:4px 12px}.tc.intro .row{margin-top:10px}.tc.intro .tel.big{margin-top:10px;padding:8px 14px}}
+
+.tc.intro{background:none;backdrop-filter:none;-webkit-backdrop-filter:none;padding:0;border-radius:0;text-shadow:0 1px 10px rgba(110,35,0,.45)}
+.tc.intro>p,.tc.intro .price small{display:none}
+.tc.intro .price{margin:12px 0 0}
+.pw{padding-top:60px;padding-bottom:12%}
+@media(max-width:820px){.tc.intro{padding:0 4px}.pw{padding-top:70px;padding-bottom:30%}}
+.tc.intro .tag{color:#fff;border-color:rgba(255,255,255,.75);background:transparent}
 </style>
 </head>
 <body>
@@ -248,10 +255,6 @@ footer .fl{margin-top:8px;display:flex;gap:6px 16px;justify-content:center;flex-
     </div></div>
     <div class="ly pc"></div>
   </div>
-  <div class="pnav" id="pnav"></div>
-  <button class="pa" id="pp" type="button" aria-label="Предыдущая часть"><svg viewBox="0 0 28 28"><path d="M24 14H4M12 6l-8 8 8 8"/></svg></button>
-  <div class="pcn first" id="pcn"><span class="n">01 / 07</span></div>
-  <button class="pa" id="pn" type="button" aria-label="Следующая часть"><svg viewBox="0 0 28 28"><path d="M4 14h20M16 6l8 8-8 8"/></svg></button>
 </header>
 
 <section style="padding-top:10px;padding-bottom:20px"><div class="wrap">
@@ -304,8 +307,7 @@ footer .fl{margin-top:8px;display:flex;gap:6px 16px;justify-content:center;flex-
 <section><div class="wrap">
   <h2 class="rv">Почему берут <span>у нас</span></h2>
   <div class="stats">
-    <div class="card rv"><span class="ic">🆕</span><h3>Совершенно новая</h3><p>Не б/у и не восстановленная — состояние «Новое».</p></div>
-    <div class="card rv"><span class="ic">🏭</span><h3>Завод ТЗА</h3><p>Тольяттинский завод автоагрегатов, сделано в России.</p></div>
+    <div class="card rv"><span class="ic">🆕</span><h3>Только оригинальные детали</h3><p>Не б/у и не восстановленные: только заводские комплектующие.</p></div>
     <div class="card rv"><span class="ic">🛡️</span><h3>Гарантия</h3><p>Коробка собрана из заводских комплектующих и идёт с гарантией.</p></div>
     <div class="card rv"><span class="ic">🚚</span><h3>Доставка по России</h3><p>Отправляем транспортной компанией. Есть Авито Доставка.</p></div>
   </div>
@@ -545,88 +547,9 @@ var c=document.getElementById('chips');if(!c)return;c.addEventListener('click',f
 </script>
 <script>
 (function(){
-var st=document.getElementById('ps');if(!st)return;
-var AR=468/490;
-var D=[
-{k:'Корпус',t:'Картер',x:.62,y:.12,z:1.9,c:'#2b1a3d',d:'Литой алюминиевый корпус. Держит валы и шестерни на своих местах и защищает их от грязи.'},
-{k:'Валы',t:'Валы и шестерни',x:.3,y:.62,z:2,c:'#12343b',d:'Валы с шестернями передают крутящий момент от двигателя и дают разные передаточные числа.'},
-{k:'Вилки',t:'Вилки переключения',x:.78,y:.3,z:2.3,c:'#3a2a0e',d:'Вилки двигают муфты синхронизаторов и включают нужную передачу.'},
-{k:'Выбор',t:'Механизм выбора передач',x:.55,y:.3,z:2.2,c:'#3d1424',d:'Передаёт движение рычага на вилки, чтобы включалась именно та передача, которую вы выбрали.'},
-{k:'Дифференциал',t:'Главная пара',x:.74,y:.82,z:2,c:'#16301f',d:'Крупная шестерня главной передачи с дифференциалом отдаёт момент на колёса и позволяет им вращаться с разной скоростью.'},
-{k:'Датчик',t:'Датчик на корпусе',x:.34,y:.36,z:2.4,c:'#1f2a45',d:'Электрический датчик на корпусе коробки передаёт сигнал в электрику автомобиля.'}
-];
-var F={pw:.40,pv:.15,pt:.55,pc:.75},nav=document.getElementById('pnav'),slides=[st.querySelector('.ps')],tabs=[];
-function el(tag,cls,txt){var e=document.createElement(tag);if(cls)e.className=cls;if(txt!=null)e.textContent=txt;return e}
-function pos(x,z){return ((0.5-x*z)/(1-z)*100).toFixed(2)+'%'}
-D.forEach(function(d,i){
-  var sl=el('div','ps');sl.style.background=d.c;
-  var w=el('div','ly pw');w.appendChild(el('span',null,d.k));
-  var v=el('div','ly pv'),vw=el('div','vw'),vi=el('div','vi');
-  var h=.5/d.z,cx=Math.min(1-h,Math.max(h,d.x)),cy=Math.min(1-h,Math.max(h,d.y));
-  vi.style.backgroundSize=(d.z*100)+'% auto';vi.style.backgroundPosition=pos(cx,d.z)+' '+pos(cy,d.z);
-  var rg=el('div','ring');rg.style.left=((d.x-(cx-h))*d.z*100)+'%';rg.style.top=((d.y-(cy-h))*d.z*100)+'%';
-  vw.appendChild(vi);vw.appendChild(rg);v.appendChild(vw);
-  var t=el('div','ly pt'),tc=el('div','tc');
-  tc.appendChild(el('b',null,'0'+(i+2)));tc.appendChild(el('h3',null,d.t));tc.appendChild(el('p',null,d.d));
-  var a=el('a',null,'Цены на КПП →');a.href='#catalog';tc.appendChild(a);t.appendChild(tc);
-  var c=el('div','ly pc'),mm=el('div','mm'),mi=el('div','vi'),dot=el('i'),lb=el('em',null,'КПП');
-  dot.style.left=(d.x*100)+'%';dot.style.top=(d.y*100)+'%';mm.appendChild(mi);mm.appendChild(dot);mm.appendChild(lb);c.appendChild(mm);
-  sl.appendChild(w);sl.appendChild(v);sl.appendChild(t);sl.appendChild(c);
-  st.insertBefore(sl,nav);slides.push(sl);
-  var b=el('button','',d.k);b.type='button';b.addEventListener('click',function(){user();go(i+1)});nav.appendChild(b);tabs.push(b);
-});
-var b0=el('button','on','КПП');b0.type='button';b0.addEventListener('click',function(){user();go(0)});nav.insertBefore(b0,nav.firstChild);tabs.unshift(b0);
-var cur=0,busy=false,last=0,rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
-function fit(){
-  var W=st.clientWidth,H=st.clientHeight,mob=W<640;
-  slides.forEach(function(sl){var sp=sl.querySelector('.pw span');sp.style.fontSize='100px';
-    var base=H*(mob?.3:.42),mw=W*.92,w100=sp.offsetWidth||1;sp.style.fontSize=Math.min(base,100*mw/w100)+'px'})
-}
+var st=document.getElementById('ps'),sp=st&&st.querySelector('.pw span');if(!sp)return;
+function fit(){var W=st.clientWidth,H=st.clientHeight;sp.style.fontSize='100px';var w=sp.offsetWidth||1;sp.style.fontSize=Math.min(H*(W<640?.3:.42),100*W*.92/w)+'px'}
 addEventListener('resize',fit);if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);fit();
-var T=[0,.031,.134,.206,.278,.34,.412,.485,.546,.583,.62,.69,.79,.85,.93,1],C=[0,.006,.012,.023,.047,.07,.105,.158,.246,.55,.825,.9,.94,.956,.975,1];
-function cov(t){if(t<=0)return 0;if(t>=1)return 1;var i=0;while(i<T.length-2&&t>=T[i+1])i++;var k=(t-T[i])/(T[i+1]-T[i]);k=k*k*(3-2*k);return C[i]+(C[i+1]-C[i])*k}
-function lay(sl,fn){['pw','pv','pt','pc'].forEach(function(n){sl.querySelector('.'+n).style.transform=fn(n)})}
-function clear(sl){sl.style.clipPath='';lay(sl,function(){return ''})}
-function setTab(n){tabs.forEach(function(b,i){b.classList.toggle('on',i===n)});var pc=document.getElementById('pcn');pc.querySelector('.n').textContent='0'+(n+1)+' / 0'+slides.length;pc.classList.toggle('first',n===0);var b=tabs[n];if(b.scrollIntoView&&nav.scrollWidth>nav.clientWidth)nav.scrollLeft=b.offsetLeft-nav.clientWidth/2+b.offsetWidth/2}
-function go(n,dir){
-  n=(n+slides.length)%slides.length;if(busy||n===cur)return;
-  if(dir==null)dir=n>cur?1:-1;
-  setTab(n);
-  var A=slides[cur],B=slides[n];
-  if(rm){A.classList.remove('cur');B.classList.add('cur');cur=n;return}
-  busy=true;var W=st.clientWidth;
-  B.classList.add('act');A.classList.add('out');
-  var t0=performance.now();
-  (function step(now){
-    var t=(now-t0)/970,c=cov(Math.min(t,1));
-    A.style.clipPath=dir>0?'inset(0 '+(c*100)+'% 0 0)':'inset(0 0 0 '+(c*100)+'%)';
-    lay(A,function(){return 'translateX('+(-dir*c*.14*W)+'px)'});
-    var k=Math.max(0,Math.min(1,(t-.5)/.42)),e=1-(1-k)*(1-k);
-    lay(B,function(n2){return 'translateX('+(dir*(1-e)*F[n2]*W)+'px)'});
-    if(t<1||k<1){requestAnimationFrame(step)}else{
-      A.classList.remove('cur','out');B.classList.remove('act');B.classList.add('cur');clear(A);clear(B);cur=n;busy=false}
-  })(t0);
-}
-function user(){last=Date.now()}
-document.getElementById('pp').addEventListener('click',function(){user();go(cur-1,-1)});
-document.getElementById('pn').addEventListener('click',function(){user();go(cur+1,1)});
-tabs.forEach(function(b,i){});
-st.addEventListener('keydown',function(e){if(e.key==='ArrowLeft'){user();go(cur-1,-1)}else if(e.key==='ArrowRight'){user();go(cur+1,1)}});
-var zone=0,since=0,lastEdge=0;
-var eL=el('div','edge l'),eR=el('div','edge r');eL.textContent='‹';eR.textContent='›';st.appendChild(eL);st.appendChild(eR);
-function ez(e){var r=st.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top,z=0;
-  if(y>0&&y<r.height&&!(e.target.closest&&e.target.closest('.tc,.pa,.pnav'))){var w=Math.min(80,r.width*.12);if(x<w)z=-1;else if(x>r.width-w)z=1}
-  if(z!==zone){zone=z;since=Date.now()}
-  eL.classList.toggle('hot',z<0&&cur>0);eR.classList.toggle('hot',z>0&&cur<slides.length-1)}
-st.addEventListener('mousemove',ez);
-st.addEventListener('mouseleave',function(){zone=0;eL.classList.remove('hot');eR.classList.remove('hot')});
-setInterval(function(){var n=Date.now();if(!zone||busy||n-since<250||n-lastEdge<1500)return;
-  var t=cur+zone;if(t<0||t>=slides.length)return;lastEdge=n;user();go(t,zone);setTimeout(function(){eL.classList.toggle('hot',zone<0&&cur>0);eR.classList.toggle('hot',zone>0&&cur<slides.length-1)},1000)},120);
-var sx=0,sy=0,dn=false;
-st.addEventListener('pointerdown',function(e){if(e.target.closest('button,a'))return;dn=true;sx=e.clientX;sy=e.clientY});
-addEventListener('pointerup',function(e){if(!dn)return;dn=false;var dx=e.clientX-sx,dy=e.clientY-sy;
-  if(Math.abs(dx)>45&&Math.abs(dx)>Math.abs(dy)){user();dx<0?go(cur+1,1):go(cur-1,-1)}
-});
 })();
 </script>
 </body>
